@@ -185,7 +185,7 @@ class TestTaxReportAPI(FrappeTestCase):
 
     def test_summary_returns_dict(self):
         """get_withholding_tax_summary should return expected structure."""
-        from lifegence_jp_accounting.api.tax_report import get_withholding_tax_summary
+        from lifegence_jp.jp_accounting.api.tax_report import get_withholding_tax_summary
 
         result = get_withholding_tax_summary(year=2026)
         self.assertIsInstance(result, dict)
@@ -197,7 +197,7 @@ class TestTaxReportAPI(FrappeTestCase):
 
     def test_summary_empty_period(self):
         """Summary should return zeros for period with no submitted entries."""
-        from lifegence_jp_accounting.api.tax_report import get_withholding_tax_summary
+        from lifegence_jp.jp_accounting.api.tax_report import get_withholding_tax_summary
 
         result = get_withholding_tax_summary(year=2099)
         self.assertEqual(result["count"], 0)

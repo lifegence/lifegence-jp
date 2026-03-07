@@ -2,9 +2,9 @@
 """Parse unittest output from bench run-tests and update the markdown test procedure.
 
 Usage:
-    bench run-tests --app lifegence_bpm \
-      --module lifegence_bpm.tests.test_workflow_transitions 2>&1 | \
-      python apps/lifegence_bpm/lifegence_bpm/tests/run_and_record.py
+    bench run-tests --app lifegence_jp \
+      --module lifegence_jp.bpm.tests.test_workflow_transitions 2>&1 | \
+      python apps/lifegence_jp/lifegence_jp/bpm/tests/run_and_record.py
 
 The script:
   1. Reads unittest output from stdin

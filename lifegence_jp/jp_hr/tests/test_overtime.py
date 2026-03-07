@@ -133,7 +133,7 @@ class TestOvertime(FrappeTestCase):
 		for day in range(1, 21):
 			self._create_attendance(f"2026-03-{day:02d}", working_hours=9)
 
-		from lifegence_jp_hr.api.overtime import check_overtime_against_agreement
+		from lifegence_jp.jp_hr.api.overtime import check_overtime_against_agreement
 		result = check_overtime_against_agreement(
 			employee=self.test_employee, month="2026-03",
 		)
@@ -156,7 +156,7 @@ class TestOvertime(FrappeTestCase):
 		for day in range(1, 21):
 			self._create_attendance(f"2026-04-{day:02d}", working_hours=9.85)
 
-		from lifegence_jp_hr.api.overtime import check_overtime_against_agreement
+		from lifegence_jp.jp_hr.api.overtime import check_overtime_against_agreement
 		result = check_overtime_against_agreement(
 			employee=self.test_employee, month="2026-04",
 		)
@@ -179,7 +179,7 @@ class TestOvertime(FrappeTestCase):
 		for day in range(1, 21):
 			self._create_attendance(f"2026-05-{day:02d}", working_hours=10.5)
 
-		from lifegence_jp_hr.api.overtime import check_overtime_against_agreement
+		from lifegence_jp.jp_hr.api.overtime import check_overtime_against_agreement
 		result = check_overtime_against_agreement(
 			employee=self.test_employee, month="2026-05",
 		)
@@ -244,7 +244,7 @@ class TestOvertime(FrappeTestCase):
 				"Employee", {"employee_name": "テスト次郎"}, "name"
 			)
 
-		from lifegence_jp_hr.api.overtime import check_overtime_against_agreement
+		from lifegence_jp.jp_hr.api.overtime import check_overtime_against_agreement
 		result = check_overtime_against_agreement(
 			employee=test_emp2, month="2026-06",
 		)

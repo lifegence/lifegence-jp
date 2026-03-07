@@ -80,7 +80,7 @@ class TestMyNumber(FrappeTestCase):
 		"""TC-MN03: get_my_number_masked() creates an access log."""
 		self._create_my_number_record()
 
-		from lifegence_jp_hr.api.my_number import get_my_number_masked
+		from lifegence_jp.jp_hr.api.my_number import get_my_number_masked
 		result = get_my_number_masked(employee=self.test_employee)
 
 		self.assertTrue(result["success"])
@@ -100,7 +100,7 @@ class TestMyNumber(FrappeTestCase):
 		"""TC-MN04: access_my_number() returns decrypted value and logs access."""
 		self._create_my_number_record(my_number="111122223333")
 
-		from lifegence_jp_hr.api.my_number import access_my_number
+		from lifegence_jp.jp_hr.api.my_number import access_my_number
 		result = access_my_number(employee=self.test_employee, purpose="年末調整処理")
 
 		self.assertTrue(result["success"])
@@ -145,7 +145,7 @@ class TestMyNumber(FrappeTestCase):
 		# Count logs before
 		before_count = frappe.db.count("My Number Access Log", {"employee": self.test_employee})
 
-		from lifegence_jp_hr.api.my_number import check_my_number_status
+		from lifegence_jp.jp_hr.api.my_number import check_my_number_status
 		result = check_my_number_status(employee=self.test_employee)
 
 		self.assertTrue(result["success"])
@@ -161,7 +161,7 @@ class TestMyNumber(FrappeTestCase):
 		"""TC-MN07: Detect expired My Number when valid_until is in the past."""
 		self._create_my_number_record(valid_until="2020-01-01")
 
-		from lifegence_jp_hr.api.my_number import check_my_number_status
+		from lifegence_jp.jp_hr.api.my_number import check_my_number_status
 		result = check_my_number_status(employee=self.test_employee)
 
 		self.assertTrue(result["success"])

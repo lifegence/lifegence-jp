@@ -55,7 +55,7 @@ def on_document_update(doc, method):
 		# Execute action
 		if action_ref.run_in_background:
 			frappe.enqueue(
-				"lifegence_bpm.automation.handlers.execute_action",
+				"lifegence_jp.bpm.automation.handlers.execute_action",
 				action_name=action_ref.name,
 				reference_doctype=doc.doctype,
 				reference_name=doc.name,
@@ -64,7 +64,7 @@ def on_document_update(doc, method):
 				queue="default",
 			)
 		else:
-			from lifegence_bpm.automation.handlers import execute_action
+			from lifegence_jp.bpm.automation.handlers import execute_action
 
 			execute_action(
 				action_name=action_ref.name,

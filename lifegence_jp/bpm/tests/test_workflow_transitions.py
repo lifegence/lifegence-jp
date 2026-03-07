@@ -213,7 +213,7 @@ def _ensure_crm_master_data():
 
 def _ensure_workflows():
 	"""Run setup_workflows to ensure all BPM workflows exist."""
-	from lifegence_bpm.setup.setup_workflow import setup_workflows
+	from lifegence_jp.bpm.setup.setup_workflow import setup_workflows
 
 	setup_workflows()
 	frappe.db.commit()
