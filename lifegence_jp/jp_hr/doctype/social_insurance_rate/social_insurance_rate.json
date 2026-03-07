@@ -1,0 +1,176 @@
+{
+	"actions": [],
+	"autoname": "field:rate_name",
+	"creation": "2026-03-02 00:00:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"rate_name",
+		"effective_from",
+		"effective_to",
+		"column_break_basic",
+		"prefecture",
+		"section_break_health",
+		"health_insurance_rate",
+		"health_insurance_employee",
+		"column_break_health",
+		"nursing_care_rate",
+		"section_break_pension",
+		"pension_rate",
+		"column_break_pension",
+		"pension_employee",
+		"section_break_employment",
+		"employment_insurance_employee",
+		"column_break_employment",
+		"employment_insurance_employer"
+	],
+	"fields": [
+		{
+			"fieldname": "rate_name",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "料率名",
+			"reqd": 1,
+			"unique": 1,
+			"description": "例: 令和6年度_東京"
+		},
+		{
+			"fieldname": "effective_from",
+			"fieldtype": "Date",
+			"in_list_view": 1,
+			"label": "適用開始日",
+			"reqd": 1
+		},
+		{
+			"fieldname": "effective_to",
+			"fieldtype": "Date",
+			"label": "適用終了日"
+		},
+		{
+			"fieldname": "column_break_basic",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "prefecture",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "都道府県"
+		},
+		{
+			"fieldname": "section_break_health",
+			"fieldtype": "Section Break",
+			"label": "健康保険"
+		},
+		{
+			"fieldname": "health_insurance_rate",
+			"fieldtype": "Percent",
+			"label": "健康保険料率（労使合計）",
+			"description": "例: 9.98%"
+		},
+		{
+			"fieldname": "health_insurance_employee",
+			"fieldtype": "Percent",
+			"label": "健康保険料率（被保険者負担）",
+			"description": "例: 4.99%"
+		},
+		{
+			"fieldname": "column_break_health",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "nursing_care_rate",
+			"fieldtype": "Percent",
+			"label": "介護保険料率（40-64歳）",
+			"description": "例: 1.60%"
+		},
+		{
+			"fieldname": "section_break_pension",
+			"fieldtype": "Section Break",
+			"label": "厚生年金"
+		},
+		{
+			"fieldname": "pension_rate",
+			"fieldtype": "Percent",
+			"label": "厚生年金保険料率（労使合計）",
+			"default": "18.3",
+			"description": "固定 18.3%"
+		},
+		{
+			"fieldname": "column_break_pension",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "pension_employee",
+			"fieldtype": "Percent",
+			"label": "厚生年金保険料率（被保険者）",
+			"default": "9.15",
+			"description": "固定 9.15%"
+		},
+		{
+			"fieldname": "section_break_employment",
+			"fieldtype": "Section Break",
+			"label": "雇用保険"
+		},
+		{
+			"fieldname": "employment_insurance_employee",
+			"fieldtype": "Percent",
+			"label": "雇用保険料率（被保険者）",
+			"description": "例: 0.6%"
+		},
+		{
+			"fieldname": "column_break_employment",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "employment_insurance_employer",
+			"fieldtype": "Percent",
+			"label": "雇用保険料率（事業主）",
+			"description": "例: 0.95%"
+		}
+	],
+	"index_web_pages_for_search": 0,
+	"links": [],
+	"modified": "2026-03-02 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "JP HR",
+	"name": "Social Insurance Rate",
+	"naming_rule": "By fieldname",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "HR Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "HR User"
+		}
+	],
+	"sort_field": "effective_from",
+	"sort_order": "DESC",
+	"states": [],
+	"title_field": "rate_name",
+	"track_changes": 1
+}

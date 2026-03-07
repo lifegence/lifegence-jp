@@ -1,0 +1,200 @@
+{
+	"actions": [],
+	"allow_rename": 1,
+	"autoname": "field:action_name",
+	"creation": "2026-01-30 00:00:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"action_name",
+		"enabled",
+		"column_break_basic",
+		"document_type",
+		"workflow_state",
+		"previous_state",
+		"section_break_action",
+		"action_type",
+		"url",
+		"http_method",
+		"column_break_action",
+		"headers",
+		"request_body_template",
+		"section_break_auth",
+		"auth_type",
+		"auth_credentials",
+		"section_break_execution",
+		"retry_count",
+		"timeout",
+		"column_break_execution",
+		"run_in_background",
+		"condition"
+	],
+	"fields": [
+		{
+			"fieldname": "action_name",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "Action Name",
+			"reqd": 1,
+			"unique": 1
+		},
+		{
+			"default": "1",
+			"fieldname": "enabled",
+			"fieldtype": "Check",
+			"in_list_view": 1,
+			"label": "Enabled"
+		},
+		{
+			"fieldname": "column_break_basic",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "document_type",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "Document Type",
+			"options": "DocType",
+			"reqd": 1
+		},
+		{
+			"fieldname": "workflow_state",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "Workflow State",
+			"reqd": 1
+		},
+		{
+			"fieldname": "previous_state",
+			"fieldtype": "Data",
+			"label": "Previous State",
+			"description": "Leave empty to trigger from any previous state"
+		},
+		{
+			"fieldname": "section_break_action",
+			"fieldtype": "Section Break",
+			"label": "Action Configuration"
+		},
+		{
+			"fieldname": "action_type",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "Action Type",
+			"options": "Webhook\nn8n Workflow\nFrappe API\nCustom Script",
+			"reqd": 1
+		},
+		{
+			"depends_on": "eval:['Webhook','n8n Workflow','Frappe API'].includes(doc.action_type)",
+			"fieldname": "url",
+			"fieldtype": "Data",
+			"label": "URL"
+		},
+		{
+			"default": "POST",
+			"depends_on": "eval:['Webhook','n8n Workflow','Frappe API'].includes(doc.action_type)",
+			"fieldname": "http_method",
+			"fieldtype": "Select",
+			"label": "HTTP Method",
+			"options": "GET\nPOST\nPUT\nPATCH"
+		},
+		{
+			"fieldname": "column_break_action",
+			"fieldtype": "Column Break"
+		},
+		{
+			"depends_on": "eval:['Webhook','n8n Workflow','Frappe API'].includes(doc.action_type)",
+			"fieldname": "headers",
+			"fieldtype": "Code",
+			"label": "Headers (JSON)",
+			"options": "JSON"
+		},
+		{
+			"fieldname": "request_body_template",
+			"fieldtype": "Code",
+			"label": "Request Body Template (Jinja)",
+			"options": "Jinja",
+			"description": "Use {{ doc }} variable to access the document fields"
+		},
+		{
+			"fieldname": "section_break_auth",
+			"fieldtype": "Section Break",
+			"label": "Authentication",
+			"collapsible": 1
+		},
+		{
+			"default": "None",
+			"fieldname": "auth_type",
+			"fieldtype": "Select",
+			"label": "Auth Type",
+			"options": "None\nAPI Key\nBearer Token\nBasic Auth"
+		},
+		{
+			"depends_on": "eval:doc.auth_type!='None'",
+			"fieldname": "auth_credentials",
+			"fieldtype": "Password",
+			"label": "Auth Credentials"
+		},
+		{
+			"fieldname": "section_break_execution",
+			"fieldtype": "Section Break",
+			"label": "Execution Settings",
+			"collapsible": 1
+		},
+		{
+			"default": "3",
+			"fieldname": "retry_count",
+			"fieldtype": "Int",
+			"label": "Retry Count"
+		},
+		{
+			"default": "30",
+			"fieldname": "timeout",
+			"fieldtype": "Int",
+			"label": "Timeout (seconds)"
+		},
+		{
+			"fieldname": "column_break_execution",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "1",
+			"fieldname": "run_in_background",
+			"fieldtype": "Check",
+			"label": "Run in Background"
+		},
+		{
+			"fieldname": "condition",
+			"fieldtype": "Code",
+			"label": "Condition (Python)",
+			"options": "Python",
+			"description": "Python expression using doc variable. e.g. doc.grand_total > 10000000"
+		}
+	],
+	"index_web_pages_for_search": 0,
+	"links": [],
+	"modified": "2026-01-30 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "BPM",
+	"name": "BPM Action",
+	"naming_rule": "By fieldname",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		}
+	],
+	"sort_field": "creation",
+	"sort_order": "DESC",
+	"states": [],
+	"title_field": "action_name",
+	"track_changes": 1
+}

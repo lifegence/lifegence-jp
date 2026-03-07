@@ -1,0 +1,61 @@
+[
+	{
+		"doctype": "Social Insurance Rate",
+		"name": "令和6年度_東京",
+		"rate_name": "令和6年度_東京",
+		"effective_from": "2024-03-01",
+		"effective_to": "2025-02-28",
+		"prefecture": "東京都",
+		"health_insurance_rate": 9.98,
+		"health_insurance_employee": 4.99,
+		"nursing_care_rate": 1.60,
+		"pension_rate": 18.3,
+		"pension_employee": 9.15,
+		"employment_insurance_employee": 0.6,
+		"employment_insurance_employer": 0.95
+	},
+	{
+		"doctype": "Social Insurance Rate",
+		"name": "令和6年度_大阪",
+		"rate_name": "令和6年度_大阪",
+		"effective_from": "2024-03-01",
+		"effective_to": "2025-02-28",
+		"prefecture": "大阪府",
+		"health_insurance_rate": 10.29,
+		"health_insurance_employee": 5.145,
+		"nursing_care_rate": 1.60,
+		"pension_rate": 18.3,
+		"pension_employee": 9.15,
+		"employment_insurance_employee": 0.6,
+		"employment_insurance_employer": 0.95
+	},
+	{
+		"doctype": "Social Insurance Rate",
+		"name": "令和6年度_愛知",
+		"rate_name": "令和6年度_愛知",
+		"effective_from": "2024-03-01",
+		"effective_to": "2025-02-28",
+		"prefecture": "愛知県",
+		"health_insurance_rate": 10.02,
+		"health_insurance_employee": 5.01,
+		"nursing_care_rate": 1.60,
+		"pension_rate": 18.3,
+		"pension_employee": 9.15,
+		"employment_insurance_employee": 0.6,
+		"employment_insurance_employer": 0.95
+	},
+	{
+		"doctype": "Social Insurance Rate",
+		"name": "令和7年度_東京",
+		"rate_name": "令和7年度_東京",
+		"effective_from": "2025-03-01",
+		"prefecture": "東京都",
+		"health_insurance_rate": 9.98,
+		"health_insurance_employee": 4.99,
+		"nursing_care_rate": 1.60,
+		"pension_rate": 18.3,
+		"pension_employee": 9.15,
+		"employment_insurance_employee": 0.6,
+		"employment_insurance_employer": 0.95
+	}
+]

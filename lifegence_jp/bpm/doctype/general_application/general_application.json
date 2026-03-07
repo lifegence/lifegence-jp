@@ -1,0 +1,134 @@
+{
+	"actions": [],
+	"autoname": "naming_series:",
+	"creation": "2026-03-02 00:00:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"application_title",
+		"naming_series",
+		"application_type",
+		"column_break_basic",
+		"applicant",
+		"application_date",
+		"template",
+		"section_break_description",
+		"description",
+		"section_break_status",
+		"workflow_state"
+	],
+	"fields": [
+		{
+			"fieldname": "application_title",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "届出件名",
+			"reqd": 1
+		},
+		{
+			"default": "APP-.#####",
+			"fieldname": "naming_series",
+			"fieldtype": "Select",
+			"hidden": 1,
+			"label": "Naming Series",
+			"options": "APP-.#####"
+		},
+		{
+			"fieldname": "application_type",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "届出種別",
+			"options": "住所変更\n慶弔\n通勤経路変更\nその他",
+			"reqd": 1
+		},
+		{
+			"fieldname": "column_break_basic",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "applicant",
+			"fieldtype": "Link",
+			"label": "申請者",
+			"options": "Employee"
+		},
+		{
+			"default": "Today",
+			"fieldname": "application_date",
+			"fieldtype": "Date",
+			"label": "申請日",
+			"reqd": 1
+		},
+		{
+			"fieldname": "template",
+			"fieldtype": "Link",
+			"label": "テンプレート",
+			"options": "Application Template"
+		},
+		{
+			"fieldname": "section_break_description",
+			"fieldtype": "Section Break"
+		},
+		{
+			"fieldname": "description",
+			"fieldtype": "Text Editor",
+			"label": "届出内容"
+		},
+		{
+			"collapsible": 1,
+			"fieldname": "section_break_status",
+			"fieldtype": "Section Break",
+			"label": "ステータス"
+		},
+		{
+			"fieldname": "workflow_state",
+			"fieldtype": "Data",
+			"hidden": 1,
+			"label": "Workflow State"
+		}
+	],
+	"index_web_pages_for_search": 0,
+	"links": [],
+	"modified": "2026-03-02 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "BPM",
+	"name": "General Application",
+	"naming_rule": "By \"Naming Series\" field",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "HR Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"print": 1,
+			"read": 1,
+			"role": "Employee",
+			"write": 1
+		}
+	],
+	"sort_field": "creation",
+	"sort_order": "DESC",
+	"states": [],
+	"title_field": "application_title",
+	"track_changes": 1
+}

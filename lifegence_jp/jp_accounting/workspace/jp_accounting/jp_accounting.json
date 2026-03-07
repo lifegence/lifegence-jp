@@ -1,0 +1,101 @@
+{
+	"charts": [],
+	"content": "[{\"id\":\"heading\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>日本会計</b></span>\",\"col\":12}},{\"id\":\"sc1\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"JP Invoice Settings\",\"col\":4}},{\"id\":\"sc2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Withholding Tax Rule\",\"col\":4}},{\"id\":\"sc3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Withholding Tax Entry\",\"col\":4}}]",
+	"creation": "2026-02-14 00:00:00.000000",
+	"custom_blocks": [],
+	"doctype": "Workspace",
+	"for_user": "",
+	"hide_custom": 0,
+	"icon": "accounting",
+	"idx": 0,
+	"is_hidden": 0,
+	"label": "JP Accounting",
+	"links": [
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Withholding Tax",
+			"link_count": 0,
+			"onboard": 0,
+			"type": "Card Break"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Withholding Tax Rule",
+			"link_count": 0,
+			"link_to": "Withholding Tax Rule",
+			"link_type": "DocType",
+			"onboard": 1,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Withholding Tax Entry",
+			"link_count": 0,
+			"link_to": "Withholding Tax Entry",
+			"link_type": "DocType",
+			"onboard": 1,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Settings",
+			"link_count": 0,
+			"onboard": 0,
+			"type": "Card Break"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "JP Invoice Settings",
+			"link_count": 0,
+			"link_to": "JP Invoice Settings",
+			"link_type": "DocType",
+			"onboard": 1,
+			"type": "Link"
+		}
+	],
+	"modified": "2026-02-14 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "JP Accounting",
+	"name": "JP Accounting",
+	"number_cards": [],
+	"owner": "Administrator",
+	"parent_page": "",
+	"public": 1,
+	"restrict_to_domain": "",
+	"roles": [
+		{"role": "System Manager"},
+		{"role": "Accounts Manager"},
+		{"role": "Accounts User"}
+	],
+	"sequence_id": 52.0,
+	"shortcuts": [
+		{
+			"color": "Blue",
+			"doc_view": "",
+			"label": "JP Invoice Settings",
+			"link_to": "JP Invoice Settings",
+			"type": "DocType"
+		},
+		{
+			"color": "Green",
+			"doc_view": "List",
+			"label": "Withholding Tax Rule",
+			"link_to": "Withholding Tax Rule",
+			"type": "DocType"
+		},
+		{
+			"color": "Orange",
+			"doc_view": "List",
+			"label": "Withholding Tax Entry",
+			"link_to": "Withholding Tax Entry",
+			"type": "DocType"
+		}
+	],
+	"title": "会計",
+	"type": "Workspace"
+}

@@ -1,0 +1,77 @@
+{
+	"actions": [],
+	"creation": "2026-03-02 00:00:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"approver",
+		"approver_name",
+		"role",
+		"sequence",
+		"status",
+		"comment",
+		"action_date"
+	],
+	"fields": [
+		{
+			"fieldname": "approver",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "\u627f\u8a8d\u8005",
+			"options": "User",
+			"reqd": 1
+		},
+		{
+			"fetch_from": "approver.full_name",
+			"fieldname": "approver_name",
+			"fieldtype": "Data",
+			"label": "\u627f\u8a8d\u8005\u540d",
+			"read_only": 1
+		},
+		{
+			"fieldname": "role",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "\u627f\u8a8d\u5f79\u5272"
+		},
+		{
+			"fieldname": "sequence",
+			"fieldtype": "Int",
+			"in_list_view": 1,
+			"label": "\u627f\u8a8d\u9806\u5e8f",
+			"reqd": 1
+		},
+		{
+			"default": "Pending",
+			"fieldname": "status",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "\u30b9\u30c6\u30fc\u30bf\u30b9",
+			"options": "Pending\nApproved\nReturned\nRejected"
+		},
+		{
+			"fieldname": "comment",
+			"fieldtype": "Small Text",
+			"label": "\u30b3\u30e1\u30f3\u30c8"
+		},
+		{
+			"fieldname": "action_date",
+			"fieldtype": "Datetime",
+			"label": "\u51e6\u7406\u65e5\u6642",
+			"read_only": 1
+		}
+	],
+	"index_web_pages_for_search": 0,
+	"istable": 1,
+	"links": [],
+	"modified": "2026-03-02 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "BPM",
+	"name": "Ringi Approver",
+	"owner": "Administrator",
+	"permissions": [],
+	"sort_field": "creation",
+	"sort_order": "ASC",
+	"states": [],
+	"track_changes": 0
+}

@@ -1,0 +1,320 @@
+{
+	"actions": [],
+	"autoname": "naming_series:",
+	"creation": "2026-03-02 00:00:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"naming_series",
+		"employee",
+		"employee_name",
+		"column_break_basic",
+		"fiscal_year",
+		"status",
+		"section_break_income",
+		"total_salary_income",
+		"salary_income_deduction",
+		"column_break_income",
+		"salary_income_amount",
+		"other_income",
+		"section_break_social",
+		"social_insurance_total",
+		"column_break_social",
+		"small_enterprise_mutual",
+		"section_break_deductions",
+		"deductions",
+		"total_deductions",
+		"column_break_taxable",
+		"taxable_income",
+		"section_break_tax",
+		"calculated_tax",
+		"housing_loan_deduction",
+		"column_break_tax",
+		"final_tax",
+		"withheld_total",
+		"section_break_result",
+		"adjustment_amount",
+		"column_break_result",
+		"adjustment_type",
+		"section_break_dependents",
+		"spouse_deduction_type",
+		"spouse_income",
+		"column_break_dependents",
+		"dependent_count_general",
+		"dependent_count_specific",
+		"dependent_count_elderly",
+		"dependent_count_elderly_cohabit"
+	],
+	"fields": [
+		{
+			"fieldname": "naming_series",
+			"fieldtype": "Select",
+			"hidden": 1,
+			"label": "Naming Series",
+			"options": "YEA-.YYYY.-.#####",
+			"reqd": 1
+		},
+		{
+			"fieldname": "employee",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "従業員",
+			"options": "Employee",
+			"reqd": 1
+		},
+		{
+			"fetch_from": "employee.employee_name",
+			"fieldname": "employee_name",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "従業員名",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_basic",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "fiscal_year",
+			"fieldtype": "Int",
+			"in_list_view": 1,
+			"label": "対象年度",
+			"reqd": 1
+		},
+		{
+			"default": "Draft",
+			"fieldname": "status",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "ステータス",
+			"options": "Draft\nIn Progress\nCalculated\nSubmitted\nApplied"
+		},
+		{
+			"fieldname": "section_break_income",
+			"fieldtype": "Section Break",
+			"label": "収入情報"
+		},
+		{
+			"fieldname": "total_salary_income",
+			"fieldtype": "Currency",
+			"label": "給与収入合計"
+		},
+		{
+			"fieldname": "salary_income_deduction",
+			"fieldtype": "Currency",
+			"label": "給与所得控除",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_income",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "salary_income_amount",
+			"fieldtype": "Currency",
+			"label": "給与所得金額",
+			"read_only": 1
+		},
+		{
+			"default": "0",
+			"fieldname": "other_income",
+			"fieldtype": "Currency",
+			"label": "その他所得"
+		},
+		{
+			"fieldname": "section_break_social",
+			"fieldtype": "Section Break",
+			"label": "社会保険料控除"
+		},
+		{
+			"fieldname": "social_insurance_total",
+			"fieldtype": "Currency",
+			"label": "社会保険料控除合計",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_social",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "0",
+			"fieldname": "small_enterprise_mutual",
+			"fieldtype": "Currency",
+			"label": "小規模企業共済等掛金"
+		},
+		{
+			"fieldname": "section_break_deductions",
+			"fieldtype": "Section Break",
+			"label": "所得控除明細"
+		},
+		{
+			"fieldname": "deductions",
+			"fieldtype": "Table",
+			"label": "控除明細",
+			"options": "Year End Adjustment Deduction"
+		},
+		{
+			"fieldname": "total_deductions",
+			"fieldtype": "Currency",
+			"label": "所得控除合計",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_taxable",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "taxable_income",
+			"fieldtype": "Currency",
+			"label": "課税所得金額",
+			"read_only": 1
+		},
+		{
+			"fieldname": "section_break_tax",
+			"fieldtype": "Section Break",
+			"label": "税額計算"
+		},
+		{
+			"fieldname": "calculated_tax",
+			"fieldtype": "Currency",
+			"label": "算出税額",
+			"read_only": 1
+		},
+		{
+			"default": "0",
+			"fieldname": "housing_loan_deduction",
+			"fieldtype": "Currency",
+			"label": "住宅借入金等特別控除"
+		},
+		{
+			"fieldname": "column_break_tax",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "final_tax",
+			"fieldtype": "Currency",
+			"label": "年調年税額",
+			"read_only": 1
+		},
+		{
+			"default": "0",
+			"fieldname": "withheld_total",
+			"fieldtype": "Currency",
+			"label": "源泉徴収済税額合計"
+		},
+		{
+			"fieldname": "section_break_result",
+			"fieldtype": "Section Break",
+			"label": "調整結果"
+		},
+		{
+			"fieldname": "adjustment_amount",
+			"fieldtype": "Currency",
+			"label": "過不足額",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_result",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "adjustment_type",
+			"fieldtype": "Select",
+			"label": "調整区分",
+			"options": "\n還付\n徴収",
+			"read_only": 1
+		},
+		{
+			"collapsible": 1,
+			"fieldname": "section_break_dependents",
+			"fieldtype": "Section Break",
+			"label": "扶養情報"
+		},
+		{
+			"default": "なし",
+			"fieldname": "spouse_deduction_type",
+			"fieldtype": "Select",
+			"label": "配偶者控除区分",
+			"options": "なし\n配偶者控除\n配偶者特別控除"
+		},
+		{
+			"default": "0",
+			"fieldname": "spouse_income",
+			"fieldtype": "Currency",
+			"label": "配偶者所得"
+		},
+		{
+			"fieldname": "column_break_dependents",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "0",
+			"fieldname": "dependent_count_general",
+			"fieldtype": "Int",
+			"label": "一般扶養親族数"
+		},
+		{
+			"default": "0",
+			"fieldname": "dependent_count_specific",
+			"fieldtype": "Int",
+			"label": "特定扶養親族数"
+		},
+		{
+			"default": "0",
+			"fieldname": "dependent_count_elderly",
+			"fieldtype": "Int",
+			"label": "老人扶養親族数"
+		},
+		{
+			"default": "0",
+			"fieldname": "dependent_count_elderly_cohabit",
+			"fieldtype": "Int",
+			"label": "同居老親等数"
+		}
+	],
+	"index_web_pages_for_search": 0,
+	"links": [],
+	"modified": "2026-03-02 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "JP HR",
+	"name": "Year End Adjustment",
+	"naming_rule": "By \"Naming Series\" field",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "HR Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "HR User"
+		}
+	],
+	"sort_field": "creation",
+	"sort_order": "DESC",
+	"states": [],
+	"title_field": "employee_name",
+	"track_changes": 1
+}

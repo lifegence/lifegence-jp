@@ -1,0 +1,249 @@
+{
+	"actions": [],
+	"autoname": "naming_series:",
+	"creation": "2026-03-02 00:00:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"employee",
+		"employee_name",
+		"naming_series",
+		"column_break_basic",
+		"calculation_type",
+		"target_year",
+		"status",
+		"section_break_period",
+		"period_from",
+		"column_break_period",
+		"period_to",
+		"section_break_month1",
+		"month1_days",
+		"month1_amount",
+		"column_break_month1",
+		"month2_days",
+		"month2_amount",
+		"column_break_month2",
+		"month3_days",
+		"month3_amount",
+		"section_break_result",
+		"average_remuneration",
+		"column_break_result",
+		"new_grade",
+		"new_standard_monthly",
+		"section_break_current",
+		"current_standard_monthly",
+		"section_break_workflow",
+		"workflow_state"
+	],
+	"fields": [
+		{
+			"fieldname": "employee",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "\u5f93\u696d\u54e1",
+			"options": "Employee",
+			"reqd": 1
+		},
+		{
+			"fetch_from": "employee.employee_name",
+			"fieldname": "employee_name",
+			"fieldtype": "Data",
+			"label": "\u5f93\u696d\u54e1\u540d",
+			"read_only": 1
+		},
+		{
+			"default": "REM-CALC-.#####",
+			"fieldname": "naming_series",
+			"fieldtype": "Select",
+			"hidden": 1,
+			"label": "Naming Series",
+			"options": "REM-CALC-.#####"
+		},
+		{
+			"fieldname": "column_break_basic",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "calculation_type",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "\u7b97\u5b9a\u7a2e\u5225",
+			"options": "\u7b97\u5b9a\u57fa\u790e\n\u6708\u984d\u5909\u66f4\n\u8cc7\u683c\u53d6\u5f97\u6642",
+			"reqd": 1
+		},
+		{
+			"fieldname": "target_year",
+			"fieldtype": "Int",
+			"in_list_view": 1,
+			"label": "\u5bfe\u8c61\u5e74\u5ea6",
+			"reqd": 1
+		},
+		{
+			"default": "Draft",
+			"fieldname": "status",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "\u30b9\u30c6\u30fc\u30bf\u30b9",
+			"options": "Draft\nCalculated\nSubmitted\nApplied"
+		},
+		{
+			"fieldname": "section_break_period",
+			"fieldtype": "Section Break",
+			"label": "\u5bfe\u8c61\u671f\u9593"
+		},
+		{
+			"fieldname": "period_from",
+			"fieldtype": "Date",
+			"label": "\u5bfe\u8c61\u671f\u9593\u958b\u59cb",
+			"reqd": 1
+		},
+		{
+			"fieldname": "column_break_period",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "period_to",
+			"fieldtype": "Date",
+			"label": "\u5bfe\u8c61\u671f\u9593\u7d42\u4e86",
+			"reqd": 1
+		},
+		{
+			"fieldname": "section_break_month1",
+			"fieldtype": "Section Break",
+			"label": "\u6708\u5225\u5831\u916c"
+		},
+		{
+			"fieldname": "month1_days",
+			"fieldtype": "Int",
+			"label": "1\u6708\u76ee \u652f\u6255\u57fa\u790e\u65e5\u6570"
+		},
+		{
+			"fieldname": "month1_amount",
+			"fieldtype": "Currency",
+			"label": "1\u6708\u76ee \u5831\u916c\u984d"
+		},
+		{
+			"fieldname": "column_break_month1",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "month2_days",
+			"fieldtype": "Int",
+			"label": "2\u6708\u76ee \u652f\u6255\u57fa\u790e\u65e5\u6570"
+		},
+		{
+			"fieldname": "month2_amount",
+			"fieldtype": "Currency",
+			"label": "2\u6708\u76ee \u5831\u916c\u984d"
+		},
+		{
+			"fieldname": "column_break_month2",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "month3_days",
+			"fieldtype": "Int",
+			"label": "3\u6708\u76ee \u652f\u6255\u57fa\u790e\u65e5\u6570"
+		},
+		{
+			"fieldname": "month3_amount",
+			"fieldtype": "Currency",
+			"label": "3\u6708\u76ee \u5831\u916c\u984d"
+		},
+		{
+			"fieldname": "section_break_result",
+			"fieldtype": "Section Break",
+			"label": "\u8a08\u7b97\u7d50\u679c"
+		},
+		{
+			"fieldname": "average_remuneration",
+			"fieldtype": "Currency",
+			"label": "\u5e73\u5747\u5831\u916c\u6708\u984d",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_result",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "new_grade",
+			"fieldtype": "Int",
+			"label": "\u65b0\u7b49\u7d1a",
+			"read_only": 1
+		},
+		{
+			"fieldname": "new_standard_monthly",
+			"fieldtype": "Currency",
+			"label": "\u65b0\u6a19\u6e96\u5831\u916c\u6708\u984d",
+			"read_only": 1
+		},
+		{
+			"collapsible": 1,
+			"fieldname": "section_break_current",
+			"fieldtype": "Section Break",
+			"label": "\u73fe\u884c\u60c5\u5831"
+		},
+		{
+			"fieldname": "current_standard_monthly",
+			"fieldtype": "Currency",
+			"label": "\u73fe\u884c\u6a19\u6e96\u5831\u916c\u6708\u984d",
+			"read_only": 1
+		},
+		{
+			"collapsible": 1,
+			"fieldname": "section_break_workflow",
+			"fieldtype": "Section Break",
+			"label": "\u30ef\u30fc\u30af\u30d5\u30ed\u30fc"
+		},
+		{
+			"fieldname": "workflow_state",
+			"fieldtype": "Data",
+			"hidden": 1,
+			"label": "Workflow State"
+		}
+	],
+	"index_web_pages_for_search": 0,
+	"links": [],
+	"modified": "2026-03-02 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "JP HR",
+	"name": "Remuneration Calculation",
+	"naming_rule": "By \"Naming Series\" field",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "HR Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "HR User"
+		}
+	],
+	"sort_field": "creation",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1
+}

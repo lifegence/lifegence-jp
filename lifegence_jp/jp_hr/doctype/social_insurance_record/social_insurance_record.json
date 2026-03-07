@@ -1,0 +1,172 @@
+{
+	"actions": [],
+	"autoname": "naming_series:",
+	"creation": "2026-03-02 00:00:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"employee",
+		"employee_name",
+		"naming_series",
+		"column_break_basic",
+		"record_type",
+		"effective_date",
+		"section_break_health",
+		"health_insurance_number",
+		"health_insurance_status",
+		"section_break_pension",
+		"pension_number",
+		"column_break_pension",
+		"pension_status",
+		"section_break_remarks",
+		"remarks",
+		"section_break_status",
+		"workflow_state"
+	],
+	"fields": [
+		{
+			"fieldname": "employee",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "従業員",
+			"options": "Employee",
+			"reqd": 1
+		},
+		{
+			"fetch_from": "employee.employee_name",
+			"fieldname": "employee_name",
+			"fieldtype": "Data",
+			"label": "従業員名",
+			"read_only": 1
+		},
+		{
+			"default": "SI-REC-.#####",
+			"fieldname": "naming_series",
+			"fieldtype": "Select",
+			"hidden": 1,
+			"label": "Naming Series",
+			"options": "SI-REC-.#####"
+		},
+		{
+			"fieldname": "column_break_basic",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "record_type",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "届出種別",
+			"options": "資格取得\n資格喪失\n変更",
+			"reqd": 1
+		},
+		{
+			"fieldname": "effective_date",
+			"fieldtype": "Date",
+			"in_list_view": 1,
+			"label": "効力発生日",
+			"reqd": 1
+		},
+		{
+			"fieldname": "section_break_health",
+			"fieldtype": "Section Break",
+			"label": "健康保険"
+		},
+		{
+			"fieldname": "health_insurance_number",
+			"fieldtype": "Data",
+			"label": "健康保険被保険者番号"
+		},
+		{
+			"fieldname": "health_insurance_status",
+			"fieldtype": "Select",
+			"label": "健康保険ステータス",
+			"options": "\n加入\n脱退"
+		},
+		{
+			"fieldname": "section_break_pension",
+			"fieldtype": "Section Break",
+			"label": "厚生年金"
+		},
+		{
+			"fieldname": "pension_number",
+			"fieldtype": "Data",
+			"label": "基礎年金番号"
+		},
+		{
+			"fieldname": "column_break_pension",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "pension_status",
+			"fieldtype": "Select",
+			"label": "厚生年金ステータス",
+			"options": "\n加入\n脱退"
+		},
+		{
+			"fieldname": "section_break_remarks",
+			"fieldtype": "Section Break",
+			"label": "備考"
+		},
+		{
+			"fieldname": "remarks",
+			"fieldtype": "Small Text",
+			"label": "備考"
+		},
+		{
+			"collapsible": 1,
+			"fieldname": "section_break_status",
+			"fieldtype": "Section Break",
+			"label": "ステータス"
+		},
+		{
+			"fieldname": "workflow_state",
+			"fieldtype": "Data",
+			"hidden": 1,
+			"label": "Workflow State"
+		}
+	],
+	"index_web_pages_for_search": 0,
+	"links": [],
+	"modified": "2026-03-02 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "JP HR",
+	"name": "Social Insurance Record",
+	"naming_rule": "By \"Naming Series\" field",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "HR Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "HR User"
+		}
+	],
+	"sort_field": "creation",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1
+}

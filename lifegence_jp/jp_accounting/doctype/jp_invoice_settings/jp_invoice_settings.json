@@ -1,0 +1,110 @@
+{
+ "actions": [],
+ "creation": "2026-02-09 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "invoice_section",
+  "company_registration_number",
+  "qualified_invoice_issuer_number",
+  "cb_invoice",
+  "default_tax_rate",
+  "reduced_tax_rate",
+  "e_invoice_section",
+  "enable_e_invoice",
+  "e_invoice_format",
+  "cb_e_invoice",
+  "digital_certificate_path"
+ ],
+ "fields": [
+  {
+   "fieldname": "invoice_section",
+   "fieldtype": "Section Break",
+   "label": "Invoice Settings"
+  },
+  {
+   "fieldname": "company_registration_number",
+   "fieldtype": "Data",
+   "label": "Company Registration Number (法人番号)",
+   "description": "13-digit corporate number"
+  },
+  {
+   "fieldname": "qualified_invoice_issuer_number",
+   "fieldtype": "Data",
+   "label": "Qualified Invoice Issuer Number (適格請求書発行事業者番号)",
+   "description": "T + 13-digit number for Invoice System (インボイス制度)"
+  },
+  {
+   "fieldname": "cb_invoice",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "default_tax_rate",
+   "fieldtype": "Percent",
+   "label": "Default Tax Rate (%)",
+   "default": "10",
+   "description": "Standard consumption tax rate"
+  },
+  {
+   "fieldname": "reduced_tax_rate",
+   "fieldtype": "Percent",
+   "label": "Reduced Tax Rate (%)",
+   "default": "8",
+   "description": "Reduced rate for food/beverages"
+  },
+  {
+   "fieldname": "e_invoice_section",
+   "fieldtype": "Section Break",
+   "label": "E-Invoice (電子インボイス)"
+  },
+  {
+   "fieldname": "enable_e_invoice",
+   "fieldtype": "Check",
+   "label": "Enable E-Invoice",
+   "default": "0"
+  },
+  {
+   "fieldname": "e_invoice_format",
+   "fieldtype": "Select",
+   "label": "E-Invoice Format",
+   "options": "Peppol BIS\nJP PINT",
+   "default": "JP PINT"
+  },
+  {
+   "fieldname": "cb_e_invoice",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "digital_certificate_path",
+   "fieldtype": "Data",
+   "label": "Digital Certificate Path"
+  }
+ ],
+ "issingle": 1,
+ "links": [],
+ "modified": "2026-02-09 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "JP Accounting",
+ "name": "JP Invoice Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "write": 1,
+   "role": "Accounts Manager"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

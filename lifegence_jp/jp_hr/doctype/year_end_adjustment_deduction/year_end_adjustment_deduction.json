@@ -1,0 +1,60 @@
+{
+	"actions": [],
+	"creation": "2026-03-02 00:00:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"deduction_type",
+		"amount",
+		"column_break_detail",
+		"proof_submitted",
+		"remarks"
+	],
+	"fields": [
+		{
+			"fieldname": "deduction_type",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "控除種別",
+			"options": "生命保険料控除\n地震保険料控除\n社会保険料控除（個人）\n配偶者控除\n配偶者特別控除\n扶養控除\n基礎控除\n障害者控除\nひとり親控除\n寡婦控除\n勤労学生控除",
+			"reqd": 1
+		},
+		{
+			"fieldname": "amount",
+			"fieldtype": "Currency",
+			"in_list_view": 1,
+			"label": "控除額",
+			"reqd": 1
+		},
+		{
+			"fieldname": "column_break_detail",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "0",
+			"fieldname": "proof_submitted",
+			"fieldtype": "Check",
+			"in_list_view": 1,
+			"label": "証明書提出済"
+		},
+		{
+			"fieldname": "remarks",
+			"fieldtype": "Data",
+			"label": "備考"
+		}
+	],
+	"index_web_pages_for_search": 0,
+	"istable": 1,
+	"links": [],
+	"modified": "2026-03-02 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "JP HR",
+	"name": "Year End Adjustment Deduction",
+	"naming_rule": "Random",
+	"owner": "Administrator",
+	"permissions": [],
+	"sort_field": "creation",
+	"sort_order": "ASC",
+	"states": [],
+	"track_changes": 0
+}

@@ -1,0 +1,238 @@
+{
+	"charts": [],
+	"content": "[{\"id\":\"heading\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>BPM</b></span>\",\"col\":12}},{\"id\":\"shortcuts\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"BPM Settings\",\"col\":4}},{\"id\":\"shortcut2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"BPM Action\",\"col\":4}},{\"id\":\"shortcut3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"BPM Action Log\",\"col\":4}},{\"id\":\"shortcut4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Workflow\",\"col\":4}},{\"id\":\"shortcut5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Authorization Rule\",\"col\":4}}]",
+	"creation": "2026-01-30 00:00:00.000000",
+	"custom_blocks": [],
+	"doctype": "Workspace",
+	"for_user": "",
+	"hide_custom": 0,
+	"icon": "workflow",
+	"idx": 0,
+	"is_hidden": 0,
+	"label": "BPM",
+	"links": [
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Workflow Management",
+			"link_count": 0,
+			"onboard": 0,
+			"type": "Card Break"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Workflow",
+			"link_count": 0,
+			"link_to": "Workflow",
+			"link_type": "DocType",
+			"onboard": 1,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Workflow State",
+			"link_count": 0,
+			"link_to": "Workflow State",
+			"link_type": "DocType",
+			"onboard": 0,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Workflow Action Master",
+			"link_count": 0,
+			"link_to": "Workflow Action Master",
+			"link_type": "DocType",
+			"onboard": 0,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Authorization & Approval",
+			"link_count": 0,
+			"onboard": 0,
+			"type": "Card Break"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Authorization Rule",
+			"link_count": 0,
+			"link_to": "Authorization Rule",
+			"link_type": "DocType",
+			"onboard": 1,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Process Automation",
+			"link_count": 0,
+			"onboard": 0,
+			"type": "Card Break"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "BPM Action",
+			"link_count": 0,
+			"link_to": "BPM Action",
+			"link_type": "DocType",
+			"onboard": 1,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "BPM Action Log",
+			"link_count": 0,
+			"link_to": "BPM Action Log",
+			"link_type": "DocType",
+			"onboard": 0,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "稟議・届出",
+			"link_count": 0,
+			"onboard": 0,
+			"type": "Card Break"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Ringi",
+			"link_count": 0,
+			"link_to": "Ringi",
+			"link_type": "DocType",
+			"onboard": 1,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Ringi Template",
+			"link_count": 0,
+			"link_to": "Ringi Template",
+			"link_type": "DocType",
+			"onboard": 0,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "General Application",
+			"link_count": 0,
+			"link_to": "General Application",
+			"link_type": "DocType",
+			"onboard": 0,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Application Template",
+			"link_count": 0,
+			"link_to": "Application Template",
+			"link_type": "DocType",
+			"onboard": 0,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Seal Request",
+			"link_count": 0,
+			"link_to": "Seal Request",
+			"link_type": "DocType",
+			"onboard": 0,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Settings",
+			"link_count": 0,
+			"onboard": 0,
+			"type": "Card Break"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "BPM Settings",
+			"link_count": 0,
+			"link_to": "BPM Settings",
+			"link_type": "DocType",
+			"onboard": 1,
+			"type": "Link"
+		}
+	],
+	"modified": "2026-01-30 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "BPM",
+	"name": "BPM",
+	"number_cards": [],
+	"owner": "Administrator",
+	"parent_page": "",
+	"public": 1,
+	"restrict_to_domain": "",
+	"roles": [],
+	"sequence_id": 50.0,
+	"shortcuts": [
+		{
+			"color": "Grey",
+			"doc_view": "",
+			"label": "BPM Settings",
+			"link_to": "BPM Settings",
+			"type": "DocType"
+		},
+		{
+			"color": "Grey",
+			"doc_view": "List",
+			"label": "BPM Action",
+			"link_to": "BPM Action",
+			"type": "DocType"
+		},
+		{
+			"color": "Grey",
+			"doc_view": "List",
+			"label": "BPM Action Log",
+			"link_to": "BPM Action Log",
+			"type": "DocType"
+		},
+		{
+			"color": "Grey",
+			"doc_view": "List",
+			"label": "Workflow",
+			"link_to": "Workflow",
+			"type": "DocType"
+		},
+		{
+			"color": "Grey",
+			"doc_view": "List",
+			"label": "Authorization Rule",
+			"link_to": "Authorization Rule",
+			"type": "DocType"
+		},
+		{
+			"color": "Grey",
+			"doc_view": "List",
+			"label": "Ringi",
+			"link_to": "Ringi",
+			"type": "DocType"
+		},
+		{
+			"color": "Grey",
+			"doc_view": "List",
+			"label": "Seal Request",
+			"link_to": "Seal Request",
+			"type": "DocType"
+		}
+	],
+	"title": "ワークフロー"
+}

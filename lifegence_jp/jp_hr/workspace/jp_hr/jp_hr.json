@@ -1,0 +1,265 @@
+{
+	"charts": [],
+	"content": "[{\"id\":\"heading\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>JP HR</b></span>\",\"col\":12}},{\"id\":\"shortcuts\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"JP HR Settings\",\"col\":4}},{\"id\":\"shortcut2\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Social Insurance Rate\",\"col\":4}},{\"id\":\"shortcut3\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Standard Monthly Remuneration\",\"col\":4}},{\"id\":\"shortcut4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Year End Adjustment\",\"col\":4}},{\"id\":\"shortcut5\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"My Number Record\",\"col\":4}},{\"id\":\"shortcut6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Overtime Agreement\",\"col\":4}}]",
+	"creation": "2026-03-02 00:00:00.000000",
+	"custom_blocks": [],
+	"doctype": "Workspace",
+	"for_user": "",
+	"hide_custom": 0,
+	"icon": "health",
+	"idx": 0,
+	"is_hidden": 0,
+	"label": "JP HR",
+	"links": [
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "社会保険",
+			"link_count": 0,
+			"onboard": 0,
+			"type": "Card Break"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Social Insurance Rate",
+			"link_count": 0,
+			"link_to": "Social Insurance Rate",
+			"link_type": "DocType",
+			"onboard": 1,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Social Insurance Record",
+			"link_count": 0,
+			"link_to": "Social Insurance Record",
+			"link_type": "DocType",
+			"onboard": 0,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "標準報酬月額",
+			"link_count": 0,
+			"onboard": 0,
+			"type": "Card Break"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Standard Monthly Remuneration",
+			"link_count": 0,
+			"link_to": "Standard Monthly Remuneration",
+			"link_type": "DocType",
+			"onboard": 1,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Remuneration Calculation",
+			"link_count": 0,
+			"link_to": "Remuneration Calculation",
+			"link_type": "DocType",
+			"onboard": 0,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "源泉徴収・年末調整",
+			"link_count": 0,
+			"onboard": 0,
+			"type": "Card Break"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Withholding Tax Table",
+			"link_count": 0,
+			"link_to": "Withholding Tax Table",
+			"link_type": "DocType",
+			"onboard": 1,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Year End Adjustment",
+			"link_count": 0,
+			"link_to": "Year End Adjustment",
+			"link_type": "DocType",
+			"onboard": 1,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "住民税",
+			"link_count": 0,
+			"onboard": 0,
+			"type": "Card Break"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Resident Tax",
+			"link_count": 0,
+			"link_to": "Resident Tax",
+			"link_type": "DocType",
+			"onboard": 1,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "マイナンバー管理",
+			"link_count": 0,
+			"onboard": 0,
+			"type": "Card Break"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "My Number Record",
+			"link_count": 0,
+			"link_to": "My Number Record",
+			"link_type": "DocType",
+			"onboard": 1,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "My Number Access Log",
+			"link_count": 0,
+			"link_to": "My Number Access Log",
+			"link_type": "DocType",
+			"onboard": 0,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "36協定・時間外管理",
+			"link_count": 0,
+			"onboard": 0,
+			"type": "Card Break"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Overtime Agreement",
+			"link_count": 0,
+			"link_to": "Overtime Agreement",
+			"link_type": "DocType",
+			"onboard": 1,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Overtime Alert Log",
+			"link_count": 0,
+			"link_to": "Overtime Alert Log",
+			"link_type": "DocType",
+			"onboard": 0,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "労働保険",
+			"link_count": 0,
+			"onboard": 0,
+			"type": "Card Break"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "Labor Insurance Record",
+			"link_count": 0,
+			"link_to": "Labor Insurance Record",
+			"link_type": "DocType",
+			"onboard": 1,
+			"type": "Link"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "設定",
+			"link_count": 0,
+			"onboard": 0,
+			"type": "Card Break"
+		},
+		{
+			"hidden": 0,
+			"is_query_report": 0,
+			"label": "JP HR Settings",
+			"link_count": 0,
+			"link_to": "JP HR Settings",
+			"link_type": "DocType",
+			"onboard": 1,
+			"type": "Link"
+		}
+	],
+	"modified": "2026-03-02 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "JP HR",
+	"name": "JP HR",
+	"number_cards": [],
+	"owner": "Administrator",
+	"parent_page": "",
+	"public": 1,
+	"restrict_to_domain": "",
+	"roles": [],
+	"sequence_id": 55.0,
+	"shortcuts": [
+		{
+			"color": "Grey",
+			"doc_view": "",
+			"label": "JP HR Settings",
+			"link_to": "JP HR Settings",
+			"type": "DocType"
+		},
+		{
+			"color": "Grey",
+			"doc_view": "List",
+			"label": "Social Insurance Rate",
+			"link_to": "Social Insurance Rate",
+			"type": "DocType"
+		},
+		{
+			"color": "Grey",
+			"doc_view": "List",
+			"label": "Standard Monthly Remuneration",
+			"link_to": "Standard Monthly Remuneration",
+			"type": "DocType"
+		},
+		{
+			"color": "Grey",
+			"doc_view": "List",
+			"label": "Year End Adjustment",
+			"link_to": "Year End Adjustment",
+			"type": "DocType"
+		},
+		{
+			"color": "Grey",
+			"doc_view": "List",
+			"label": "My Number Record",
+			"link_to": "My Number Record",
+			"type": "DocType"
+		},
+		{
+			"color": "Grey",
+			"doc_view": "List",
+			"label": "Overtime Agreement",
+			"link_to": "Overtime Agreement",
+			"type": "DocType"
+		}
+	],
+	"title": "人事労務"
+}

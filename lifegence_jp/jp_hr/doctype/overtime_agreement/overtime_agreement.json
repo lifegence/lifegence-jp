@@ -1,0 +1,197 @@
+{
+	"actions": [],
+	"autoname": "field:agreement_name",
+	"creation": "2026-03-02 00:00:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"agreement_name",
+		"company",
+		"column_break_basic",
+		"fiscal_year",
+		"effective_from",
+		"effective_to",
+		"section_break_general",
+		"monthly_limit",
+		"column_break_general",
+		"annual_limit",
+		"section_break_special",
+		"special_monthly_limit",
+		"special_annual_limit",
+		"column_break_special",
+		"special_months_limit",
+		"section_break_alert",
+		"alert_threshold_pct",
+		"column_break_alert",
+		"enable_alerts",
+		"section_break_remarks",
+		"remarks"
+	],
+	"fields": [
+		{
+			"fieldname": "agreement_name",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "協定名",
+			"reqd": 1,
+			"unique": 1
+		},
+		{
+			"fieldname": "company",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "会社",
+			"options": "Company",
+			"reqd": 1
+		},
+		{
+			"fieldname": "column_break_basic",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "fiscal_year",
+			"fieldtype": "Int",
+			"in_list_view": 1,
+			"label": "対象年度",
+			"reqd": 1
+		},
+		{
+			"fieldname": "effective_from",
+			"fieldtype": "Date",
+			"label": "有効開始日",
+			"reqd": 1
+		},
+		{
+			"fieldname": "effective_to",
+			"fieldtype": "Date",
+			"label": "有効終了日",
+			"reqd": 1
+		},
+		{
+			"fieldname": "section_break_general",
+			"fieldtype": "Section Break",
+			"label": "一般条項"
+		},
+		{
+			"default": "45",
+			"fieldname": "monthly_limit",
+			"fieldtype": "Float",
+			"label": "月間上限時間",
+			"reqd": 1
+		},
+		{
+			"fieldname": "column_break_general",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "360",
+			"fieldname": "annual_limit",
+			"fieldtype": "Float",
+			"label": "年間上限時間",
+			"reqd": 1
+		},
+		{
+			"collapsible": 1,
+			"fieldname": "section_break_special",
+			"fieldtype": "Section Break",
+			"label": "特別条項"
+		},
+		{
+			"default": "100",
+			"fieldname": "special_monthly_limit",
+			"fieldtype": "Float",
+			"label": "特別条項月間上限"
+		},
+		{
+			"default": "720",
+			"fieldname": "special_annual_limit",
+			"fieldtype": "Float",
+			"label": "特別条項年間上限"
+		},
+		{
+			"fieldname": "column_break_special",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "6",
+			"fieldname": "special_months_limit",
+			"fieldtype": "Int",
+			"label": "特別条項適用月数上限"
+		},
+		{
+			"fieldname": "section_break_alert",
+			"fieldtype": "Section Break",
+			"label": "アラート設定"
+		},
+		{
+			"default": "80",
+			"fieldname": "alert_threshold_pct",
+			"fieldtype": "Percent",
+			"label": "アラート閾値（%）"
+		},
+		{
+			"fieldname": "column_break_alert",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "1",
+			"fieldname": "enable_alerts",
+			"fieldtype": "Check",
+			"label": "アラート有効"
+		},
+		{
+			"fieldname": "section_break_remarks",
+			"fieldtype": "Section Break",
+			"label": "備考"
+		},
+		{
+			"fieldname": "remarks",
+			"fieldtype": "Small Text",
+			"label": "備考"
+		}
+	],
+	"index_web_pages_for_search": 0,
+	"links": [],
+	"modified": "2026-03-02 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "JP HR",
+	"name": "Overtime Agreement",
+	"naming_rule": "By fieldname",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "HR Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "HR User"
+		}
+	],
+	"sort_field": "creation",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1
+}

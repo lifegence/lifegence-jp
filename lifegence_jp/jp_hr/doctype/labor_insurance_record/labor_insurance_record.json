@@ -1,0 +1,180 @@
+{
+	"actions": [],
+	"autoname": "naming_series:",
+	"creation": "2026-03-02 00:00:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"employee",
+		"employee_name",
+		"naming_series",
+		"column_break_basic",
+		"record_type",
+		"effective_date",
+		"section_break_employment",
+		"employment_insurance_number",
+		"employment_insurance_status",
+		"column_break_employment",
+		"employment_insurance_type",
+		"section_break_workers_comp",
+		"workers_comp_status",
+		"insurance_category",
+		"column_break_workers_comp",
+		"workers_comp_rate",
+		"section_break_remarks",
+		"remarks"
+	],
+	"fields": [
+		{
+			"fieldname": "employee",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "従業員",
+			"options": "Employee",
+			"reqd": 1
+		},
+		{
+			"fetch_from": "employee.employee_name",
+			"fieldname": "employee_name",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "従業員名",
+			"read_only": 1
+		},
+		{
+			"default": "LI-REC-.#####",
+			"fieldname": "naming_series",
+			"fieldtype": "Select",
+			"hidden": 1,
+			"label": "Naming Series",
+			"options": "LI-REC-.#####"
+		},
+		{
+			"fieldname": "column_break_basic",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "record_type",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "届出種別",
+			"options": "資格取得\n資格喪失\n変更",
+			"reqd": 1
+		},
+		{
+			"fieldname": "effective_date",
+			"fieldtype": "Date",
+			"in_list_view": 1,
+			"label": "効力発生日",
+			"reqd": 1
+		},
+		{
+			"fieldname": "section_break_employment",
+			"fieldtype": "Section Break",
+			"label": "雇用保険"
+		},
+		{
+			"fieldname": "employment_insurance_number",
+			"fieldtype": "Data",
+			"label": "被保険者番号"
+		},
+		{
+			"fieldname": "employment_insurance_status",
+			"fieldtype": "Select",
+			"label": "雇用保険ステータス",
+			"options": "\n加入\n脱退"
+		},
+		{
+			"fieldname": "column_break_employment",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "employment_insurance_type",
+			"fieldtype": "Select",
+			"label": "被保険者種別",
+			"options": "\n一般被保険者\n高年齢被保険者\n短期雇用特例被保険者\n日雇労働被保険者"
+		},
+		{
+			"fieldname": "section_break_workers_comp",
+			"fieldtype": "Section Break",
+			"label": "労災保険"
+		},
+		{
+			"fieldname": "workers_comp_status",
+			"fieldtype": "Select",
+			"label": "労災保険ステータス",
+			"options": "\n適用\n非適用"
+		},
+		{
+			"default": "一般",
+			"fieldname": "insurance_category",
+			"fieldtype": "Select",
+			"label": "業種区分",
+			"options": "一般\n建設\n農林水産\n清酒製造"
+		},
+		{
+			"fieldname": "column_break_workers_comp",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "workers_comp_rate",
+			"fieldtype": "Float",
+			"label": "労災保険料率（‰）",
+			"read_only": 1
+		},
+		{
+			"fieldname": "section_break_remarks",
+			"fieldtype": "Section Break",
+			"label": "備考"
+		},
+		{
+			"fieldname": "remarks",
+			"fieldtype": "Small Text",
+			"label": "備考"
+		}
+	],
+	"index_web_pages_for_search": 0,
+	"links": [],
+	"modified": "2026-03-02 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "JP HR",
+	"name": "Labor Insurance Record",
+	"naming_rule": "By \"Naming Series\" field",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "HR Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "HR User"
+		}
+	],
+	"sort_field": "creation",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1
+}

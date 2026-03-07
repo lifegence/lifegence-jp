@@ -1,0 +1,176 @@
+{
+	"actions": [],
+	"autoname": "naming_series:",
+	"creation": "2026-03-02 00:00:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"employee",
+		"employee_name",
+		"naming_series",
+		"column_break_basic",
+		"status",
+		"collection_date",
+		"section_break_mynumber",
+		"my_number",
+		"my_number_masked",
+		"column_break_mynumber",
+		"purpose",
+		"valid_until",
+		"section_break_verification",
+		"verified_by",
+		"verified_date",
+		"column_break_verification",
+		"identity_document_type",
+		"section_break_remarks",
+		"remarks"
+	],
+	"fields": [
+		{
+			"fieldname": "employee",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "従業員",
+			"options": "Employee",
+			"reqd": 1
+		},
+		{
+			"fetch_from": "employee.employee_name",
+			"fieldname": "employee_name",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "従業員名",
+			"read_only": 1
+		},
+		{
+			"default": "MN-.#####",
+			"fieldname": "naming_series",
+			"fieldtype": "Select",
+			"hidden": 1,
+			"label": "Naming Series",
+			"options": "MN-.#####"
+		},
+		{
+			"fieldname": "column_break_basic",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "収集済",
+			"fieldname": "status",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "ステータス",
+			"options": "収集済\n確認済\n期限切れ\n削除済"
+		},
+		{
+			"default": "Today",
+			"fieldname": "collection_date",
+			"fieldtype": "Date",
+			"in_list_view": 1,
+			"label": "収集日",
+			"reqd": 1
+		},
+		{
+			"fieldname": "section_break_mynumber",
+			"fieldtype": "Section Break",
+			"label": "マイナンバー情報"
+		},
+		{
+			"fieldname": "my_number",
+			"fieldtype": "Password",
+			"label": "マイナンバー",
+			"reqd": 1
+		},
+		{
+			"fieldname": "my_number_masked",
+			"fieldtype": "Data",
+			"label": "マイナンバー（マスク表示）",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_mynumber",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "purpose",
+			"fieldtype": "Small Text",
+			"label": "利用目的",
+			"reqd": 1
+		},
+		{
+			"fieldname": "valid_until",
+			"fieldtype": "Date",
+			"label": "有効期限"
+		},
+		{
+			"collapsible": 1,
+			"fieldname": "section_break_verification",
+			"fieldtype": "Section Break",
+			"label": "確認情報"
+		},
+		{
+			"fieldname": "verified_by",
+			"fieldtype": "Link",
+			"label": "確認者",
+			"options": "User"
+		},
+		{
+			"fieldname": "verified_date",
+			"fieldtype": "Date",
+			"label": "確認日"
+		},
+		{
+			"fieldname": "column_break_verification",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "identity_document_type",
+			"fieldtype": "Select",
+			"label": "本人確認書類",
+			"options": "\n通知カード+身分証\n個人番号カード\nその他"
+		},
+		{
+			"fieldname": "section_break_remarks",
+			"fieldtype": "Section Break",
+			"label": "備考"
+		},
+		{
+			"fieldname": "remarks",
+			"fieldtype": "Small Text",
+			"label": "備考"
+		}
+	],
+	"index_web_pages_for_search": 0,
+	"links": [],
+	"modified": "2026-03-02 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "JP HR",
+	"name": "My Number Record",
+	"naming_rule": "By \"Naming Series\" field",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"export": 0,
+			"print": 0,
+			"read": 1,
+			"report": 1,
+			"role": "HR Manager"
+		}
+	],
+	"sort_field": "creation",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1
+}

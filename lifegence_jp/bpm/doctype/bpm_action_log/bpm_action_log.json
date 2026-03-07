@@ -1,0 +1,169 @@
+{
+	"actions": [],
+	"autoname": "autoincrement",
+	"creation": "2026-01-30 00:00:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"bpm_action",
+		"reference_doctype",
+		"reference_name",
+		"column_break_ref",
+		"workflow_state",
+		"previous_state",
+		"status",
+		"section_break_request",
+		"request_url",
+		"request_body",
+		"section_break_response",
+		"response_code",
+		"response_body",
+		"error_message",
+		"section_break_execution",
+		"execution_time",
+		"retry_attempt",
+		"column_break_execution",
+		"executed_at",
+		"executed_by"
+	],
+	"fields": [
+		{
+			"fieldname": "bpm_action",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "BPM Action",
+			"options": "BPM Action",
+			"reqd": 1
+		},
+		{
+			"fieldname": "reference_doctype",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "Reference DocType",
+			"options": "DocType",
+			"reqd": 1
+		},
+		{
+			"fieldname": "reference_name",
+			"fieldtype": "Dynamic Link",
+			"in_list_view": 1,
+			"label": "Reference Name",
+			"options": "reference_doctype",
+			"reqd": 1
+		},
+		{
+			"fieldname": "column_break_ref",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "workflow_state",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "Workflow State"
+		},
+		{
+			"fieldname": "previous_state",
+			"fieldtype": "Data",
+			"label": "Previous State"
+		},
+		{
+			"fieldname": "status",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "Status",
+			"options": "Pending\nSuccess\nFailed\nRetrying",
+			"reqd": 1
+		},
+		{
+			"fieldname": "section_break_request",
+			"fieldtype": "Section Break",
+			"label": "Request",
+			"collapsible": 1
+		},
+		{
+			"fieldname": "request_url",
+			"fieldtype": "Data",
+			"label": "Request URL"
+		},
+		{
+			"fieldname": "request_body",
+			"fieldtype": "Long Text",
+			"label": "Request Body"
+		},
+		{
+			"fieldname": "section_break_response",
+			"fieldtype": "Section Break",
+			"label": "Response",
+			"collapsible": 1
+		},
+		{
+			"fieldname": "response_code",
+			"fieldtype": "Int",
+			"label": "Response Code"
+		},
+		{
+			"fieldname": "response_body",
+			"fieldtype": "Long Text",
+			"label": "Response Body"
+		},
+		{
+			"fieldname": "error_message",
+			"fieldtype": "Long Text",
+			"label": "Error Message"
+		},
+		{
+			"fieldname": "section_break_execution",
+			"fieldtype": "Section Break",
+			"label": "Execution Details"
+		},
+		{
+			"fieldname": "execution_time",
+			"fieldtype": "Float",
+			"label": "Execution Time (seconds)"
+		},
+		{
+			"fieldname": "retry_attempt",
+			"fieldtype": "Int",
+			"label": "Retry Attempt"
+		},
+		{
+			"fieldname": "column_break_execution",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "executed_at",
+			"fieldtype": "Datetime",
+			"label": "Executed At"
+		},
+		{
+			"fieldname": "executed_by",
+			"fieldtype": "Link",
+			"label": "Executed By",
+			"options": "User"
+		}
+	],
+	"in_create": 1,
+	"index_web_pages_for_search": 0,
+	"links": [],
+	"modified": "2026-01-30 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "BPM",
+	"name": "BPM Action Log",
+	"naming_rule": "Autoincrement",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1
+		}
+	],
+	"sort_field": "creation",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 0
+}

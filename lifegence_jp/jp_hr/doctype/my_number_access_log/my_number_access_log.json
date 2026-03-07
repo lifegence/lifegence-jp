@@ -1,0 +1,127 @@
+{
+	"actions": [],
+	"autoname": "naming_series:",
+	"creation": "2026-03-02 00:00:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"employee",
+		"employee_name",
+		"naming_series",
+		"column_break_basic",
+		"accessed_by",
+		"accessed_at",
+		"section_break_detail",
+		"access_type",
+		"purpose",
+		"column_break_detail",
+		"ip_address",
+		"my_number_record"
+	],
+	"fields": [
+		{
+			"fieldname": "employee",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "従業員",
+			"options": "Employee",
+			"reqd": 1
+		},
+		{
+			"fetch_from": "employee.employee_name",
+			"fieldname": "employee_name",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "従業員名",
+			"read_only": 1
+		},
+		{
+			"default": "MN-LOG-.#####",
+			"fieldname": "naming_series",
+			"fieldtype": "Select",
+			"hidden": 1,
+			"label": "Naming Series",
+			"options": "MN-LOG-.#####"
+		},
+		{
+			"fieldname": "column_break_basic",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "accessed_by",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "アクセス者",
+			"options": "User",
+			"reqd": 1
+		},
+		{
+			"fieldname": "accessed_at",
+			"fieldtype": "Datetime",
+			"in_list_view": 1,
+			"label": "アクセス日時",
+			"reqd": 1
+		},
+		{
+			"fieldname": "section_break_detail",
+			"fieldtype": "Section Break",
+			"label": "アクセス詳細"
+		},
+		{
+			"fieldname": "access_type",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "アクセス種別",
+			"options": "閲覧\n出力\n提供\n削除",
+			"reqd": 1
+		},
+		{
+			"fieldname": "purpose",
+			"fieldtype": "Small Text",
+			"label": "利用目的",
+			"reqd": 1
+		},
+		{
+			"fieldname": "column_break_detail",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "ip_address",
+			"fieldtype": "Data",
+			"label": "IPアドレス",
+			"read_only": 1
+		},
+		{
+			"fieldname": "my_number_record",
+			"fieldtype": "Link",
+			"label": "マイナンバー記録",
+			"options": "My Number Record",
+			"read_only": 1
+		}
+	],
+	"index_web_pages_for_search": 0,
+	"links": [],
+	"modified": "2026-03-02 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "JP HR",
+	"name": "My Number Access Log",
+	"naming_rule": "By \"Naming Series\" field",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager"
+		},
+		{
+			"read": 1,
+			"report": 1,
+			"role": "HR Manager"
+		}
+	],
+	"sort_field": "creation",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 0
+}

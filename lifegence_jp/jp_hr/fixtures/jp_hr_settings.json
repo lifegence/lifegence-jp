@@ -1,0 +1,9 @@
+[
+	{
+		"doctype": "JP HR Settings",
+		"name": "JP HR Settings",
+		"employment_insurance_rate_type": "一般",
+		"auto_calculate_premiums": 1,
+		"fiscal_year_start": "4月"
+	}
+]

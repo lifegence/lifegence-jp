@@ -1,0 +1,149 @@
+{
+	"actions": [],
+	"autoname": "naming_series:",
+	"creation": "2026-03-02 00:00:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"seal_type",
+		"purpose",
+		"naming_series",
+		"column_break_basic",
+		"requester",
+		"request_date",
+		"section_break_document",
+		"document_type",
+		"document_reference",
+		"section_break_description",
+		"description",
+		"section_break_status",
+		"workflow_state"
+	],
+	"fields": [
+		{
+			"fieldname": "seal_type",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "印鑑種別",
+			"options": "社印\n代表印\n角印",
+			"reqd": 1
+		},
+		{
+			"fieldname": "purpose",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "使用目的",
+			"reqd": 1
+		},
+		{
+			"default": "SEAL-.#####",
+			"fieldname": "naming_series",
+			"fieldtype": "Select",
+			"hidden": 1,
+			"label": "Naming Series",
+			"options": "SEAL-.#####"
+		},
+		{
+			"fieldname": "column_break_basic",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "requester",
+			"fieldtype": "Link",
+			"label": "申請者",
+			"options": "Employee"
+		},
+		{
+			"default": "Today",
+			"fieldname": "request_date",
+			"fieldtype": "Date",
+			"label": "申請日",
+			"reqd": 1
+		},
+		{
+			"fieldname": "section_break_document",
+			"fieldtype": "Section Break",
+			"label": "対象文書"
+		},
+		{
+			"fieldname": "document_type",
+			"fieldtype": "Data",
+			"label": "対象文書種別"
+		},
+		{
+			"fieldname": "document_reference",
+			"fieldtype": "Data",
+			"label": "対象文書参照"
+		},
+		{
+			"fieldname": "section_break_description",
+			"fieldtype": "Section Break"
+		},
+		{
+			"fieldname": "description",
+			"fieldtype": "Text Editor",
+			"label": "詳細"
+		},
+		{
+			"collapsible": 1,
+			"fieldname": "section_break_status",
+			"fieldtype": "Section Break",
+			"label": "ステータス"
+		},
+		{
+			"fieldname": "workflow_state",
+			"fieldtype": "Data",
+			"hidden": 1,
+			"label": "Workflow State"
+		}
+	],
+	"index_web_pages_for_search": 0,
+	"links": [],
+	"modified": "2026-03-02 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "BPM",
+	"name": "Seal Request",
+	"naming_rule": "By \"Naming Series\" field",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "General Affairs",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"read": 1,
+			"role": "Legal Reviewer",
+			"write": 1
+		},
+		{
+			"create": 1,
+			"print": 1,
+			"read": 1,
+			"role": "Employee",
+			"write": 1
+		}
+	],
+	"sort_field": "creation",
+	"sort_order": "DESC",
+	"states": [],
+	"title_field": "purpose",
+	"track_changes": 1
+}

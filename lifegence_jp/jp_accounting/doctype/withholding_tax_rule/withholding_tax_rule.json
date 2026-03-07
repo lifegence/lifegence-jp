@@ -1,0 +1,87 @@
+{
+ "actions": [],
+ "autoname": "field:rule_name",
+ "creation": "2026-02-09 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "rule_name",
+  "income_type",
+  "cb_rule",
+  "tax_rate",
+  "threshold_amount",
+  "description_section",
+  "description"
+ ],
+ "fields": [
+  {
+   "fieldname": "rule_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Rule Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "income_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Income Type (所得区分)",
+   "options": "報酬・料金等\n給与所得\n退職所得\n配当所得\n利子所得\nその他",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cb_rule",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "tax_rate",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Tax Rate (%)",
+   "reqd": 1,
+   "description": "Withholding tax rate"
+  },
+  {
+   "fieldname": "threshold_amount",
+   "fieldtype": "Currency",
+   "label": "Threshold Amount (円)",
+   "description": "Amount above which higher rate applies"
+  },
+  {
+   "fieldname": "description_section",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Small Text",
+   "label": "Description"
+  }
+ ],
+ "links": [],
+ "modified": "2026-02-09 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "JP Accounting",
+ "name": "Withholding Tax Rule",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "System Manager",
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "write": 1,
+   "role": "Accounts Manager"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

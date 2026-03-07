@@ -1,0 +1,100 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-01-28 05:36:35.638608",
+  "name": "Approve",
+  "workflow_action_name": "Approve"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-01-28 05:36:35.639868",
+  "name": "Reject",
+  "workflow_action_name": "Reject"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-01-30 06:46:37.709710",
+  "name": "Submit for Review",
+  "workflow_action_name": "Submit for Review"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-01-30 06:46:37.710884",
+  "name": "Request Changes",
+  "workflow_action_name": "Request Changes"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-01-30 06:46:37.711652",
+  "name": "Escalate to Director",
+  "workflow_action_name": "Escalate to Director"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-01-30 06:46:37.717768",
+  "name": "Escalate to Executive",
+  "workflow_action_name": "Escalate to Executive"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-01-30 06:46:37.718672",
+  "name": "Qualify",
+  "workflow_action_name": "Qualify"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-01-30 06:46:37.719500",
+  "name": "Disqualify",
+  "workflow_action_name": "Disqualify"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-01-30 06:46:37.720277",
+  "name": "Mark as Lost",
+  "workflow_action_name": "Mark as Lost"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-01-30 06:46:37.721013",
+  "name": "Convert",
+  "workflow_action_name": "Convert"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-01-30 06:46:37.721722",
+  "name": "Confirm",
+  "workflow_action_name": "Confirm"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-01-30 06:46:37.722485",
+  "name": "Submit for Budget Check",
+  "workflow_action_name": "Submit for Budget Check"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-01-30 06:46:37.723224",
+  "name": "Pass Budget Check",
+  "workflow_action_name": "Pass Budget Check"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow Action Master",
+  "modified": "2026-01-30 06:46:37.724005",
+  "name": "Cancel",
+  "workflow_action_name": "Cancel"
+ }
+]

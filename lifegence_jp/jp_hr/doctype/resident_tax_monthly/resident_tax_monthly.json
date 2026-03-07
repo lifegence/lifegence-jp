@@ -1,0 +1,60 @@
+{
+	"actions": [],
+	"creation": "2026-03-02 00:00:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"month",
+		"amount",
+		"column_break_detail",
+		"deducted",
+		"deduction_date"
+	],
+	"fields": [
+		{
+			"fieldname": "month",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "月",
+			"options": "6月\n7月\n8月\n9月\n10月\n11月\n12月\n1月\n2月\n3月\n4月\n5月",
+			"reqd": 1
+		},
+		{
+			"fieldname": "amount",
+			"fieldtype": "Currency",
+			"in_list_view": 1,
+			"label": "税額",
+			"reqd": 1
+		},
+		{
+			"fieldname": "column_break_detail",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "0",
+			"fieldname": "deducted",
+			"fieldtype": "Check",
+			"in_list_view": 1,
+			"label": "徴収済"
+		},
+		{
+			"fieldname": "deduction_date",
+			"fieldtype": "Date",
+			"label": "徴収日"
+		}
+	],
+	"index_web_pages_for_search": 0,
+	"istable": 1,
+	"links": [],
+	"modified": "2026-03-02 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "JP HR",
+	"name": "Resident Tax Monthly",
+	"naming_rule": "Random",
+	"owner": "Administrator",
+	"permissions": [],
+	"sort_field": "creation",
+	"sort_order": "ASC",
+	"states": [],
+	"track_changes": 0
+}

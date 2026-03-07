@@ -1,0 +1,194 @@
+{
+	"actions": [],
+	"autoname": "naming_series:",
+	"creation": "2026-03-02 00:00:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"ringi_title",
+		"naming_series",
+		"column_break_basic",
+		"department",
+		"applicant",
+		"application_date",
+		"section_break_detail",
+		"ringi_category",
+		"amount",
+		"column_break_detail",
+		"ringi_template",
+		"section_break_description",
+		"description",
+		"section_break_approvers",
+		"approvers",
+		"section_break_status",
+		"workflow_state",
+		"amended_from"
+	],
+	"fields": [
+		{
+			"fieldname": "ringi_title",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "\u4ef6\u540d",
+			"reqd": 1
+		},
+		{
+			"default": "RINGI-.#####",
+			"fieldname": "naming_series",
+			"fieldtype": "Select",
+			"hidden": 1,
+			"label": "Naming Series",
+			"options": "RINGI-.#####"
+		},
+		{
+			"fieldname": "column_break_basic",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "department",
+			"fieldtype": "Link",
+			"label": "\u7533\u8acb\u90e8\u9580",
+			"options": "Department"
+		},
+		{
+			"fieldname": "applicant",
+			"fieldtype": "Link",
+			"label": "\u7533\u8acb\u8005",
+			"options": "Employee"
+		},
+		{
+			"default": "Today",
+			"fieldname": "application_date",
+			"fieldtype": "Date",
+			"label": "\u7533\u8acb\u65e5",
+			"reqd": 1
+		},
+		{
+			"fieldname": "section_break_detail",
+			"fieldtype": "Section Break",
+			"label": "\u7a1f\u8b70\u5185\u5bb9"
+		},
+		{
+			"fieldname": "ringi_category",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "\u7a2e\u5225",
+			"options": "\u8cfc\u5165\n\u5951\u7d04\n\u4eba\u4e8b\n\u305d\u306e\u4ed6",
+			"reqd": 1
+		},
+		{
+			"fieldname": "amount",
+			"fieldtype": "Currency",
+			"label": "\u91d1\u984d"
+		},
+		{
+			"fieldname": "column_break_detail",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "ringi_template",
+			"fieldtype": "Link",
+			"label": "\u30c6\u30f3\u30d7\u30ec\u30fc\u30c8",
+			"options": "Ringi Template"
+		},
+		{
+			"fieldname": "section_break_description",
+			"fieldtype": "Section Break"
+		},
+		{
+			"fieldname": "description",
+			"fieldtype": "Text Editor",
+			"label": "\u7a1f\u8b70\u5185\u5bb9\u8a73\u7d30"
+		},
+		{
+			"fieldname": "section_break_approvers",
+			"fieldtype": "Section Break",
+			"label": "\u627f\u8a8d\u8005"
+		},
+		{
+			"fieldname": "approvers",
+			"fieldtype": "Table",
+			"label": "\u627f\u8a8d\u8005\u30ea\u30b9\u30c8",
+			"options": "Ringi Approver"
+		},
+		{
+			"collapsible": 1,
+			"fieldname": "section_break_status",
+			"fieldtype": "Section Break",
+			"label": "\u30b9\u30c6\u30fc\u30bf\u30b9"
+		},
+		{
+			"fieldname": "workflow_state",
+			"fieldtype": "Data",
+			"hidden": 1,
+			"label": "Workflow State"
+		},
+		{
+			"fieldname": "amended_from",
+			"fieldtype": "Link",
+			"label": "\u4fee\u6b63\u5143",
+			"no_copy": 1,
+			"options": "Ringi",
+			"print_hide": 1,
+			"read_only": 1
+		}
+	],
+	"index_web_pages_for_search": 0,
+	"is_submittable": 1,
+	"links": [],
+	"modified": "2026-03-02 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "BPM",
+	"name": "Ringi",
+	"naming_rule": "By \"Naming Series\" field",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"amend": 1,
+			"cancel": 1,
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"submit": 1,
+			"write": 1
+		},
+		{
+			"amend": 1,
+			"cancel": 1,
+			"create": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "HR Manager",
+			"share": 1,
+			"submit": 1,
+			"write": 1
+		},
+		{
+			"print": 1,
+			"read": 1,
+			"role": "Ringi Approver",
+			"write": 1
+		},
+		{
+			"create": 1,
+			"print": 1,
+			"read": 1,
+			"role": "Employee",
+			"write": 1
+		}
+	],
+	"sort_field": "creation",
+	"sort_order": "DESC",
+	"states": [],
+	"title_field": "ringi_title",
+	"track_changes": 1
+}

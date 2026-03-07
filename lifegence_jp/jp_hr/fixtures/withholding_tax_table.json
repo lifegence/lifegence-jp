@@ -1,0 +1,13 @@
+[
+	{
+		"doctype": "Withholding Tax Table",
+		"name": "令和7年分",
+		"table_name": "令和7年分",
+		"effective_from": "2025-01-01",
+		"effective_to": "2025-12-31",
+		"tax_table_type": "月額表",
+		"kou_enabled": 1,
+		"otsu_enabled": 1,
+		"description": "令和7年分（2025年）給与所得の源泉徴収税額表（月額表）"
+	}
+]

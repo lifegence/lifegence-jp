@@ -1,0 +1,137 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "ok-sign",
+  "modified": "2026-01-28 05:36:35.629437",
+  "name": "Approved",
+  "style": "Success",
+  "workflow_state_name": "Approved"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "remove",
+  "modified": "2026-01-28 05:36:35.630420",
+  "name": "Rejected",
+  "style": "Danger",
+  "workflow_state_name": "Rejected"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-01-30 06:46:37.689817",
+  "name": "Draft",
+  "style": "",
+  "workflow_state_name": "Draft"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-01-30 06:46:37.690810",
+  "name": "Pending Review",
+  "style": "Warning",
+  "workflow_state_name": "Pending Review"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-01-30 06:46:37.691727",
+  "name": "Pending Manager Approval",
+  "style": "Warning",
+  "workflow_state_name": "Pending Manager Approval"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-01-30 06:46:37.692636",
+  "name": "Pending Director Approval",
+  "style": "Warning",
+  "workflow_state_name": "Pending Director Approval"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-01-30 06:46:37.693562",
+  "name": "Pending Executive Approval",
+  "style": "Warning",
+  "workflow_state_name": "Pending Executive Approval"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-01-30 06:46:37.694482",
+  "name": "Pending Budget Check",
+  "style": "Warning",
+  "workflow_state_name": "Pending Budget Check"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-01-30 06:46:37.695766",
+  "name": "Cancelled",
+  "style": "Danger",
+  "workflow_state_name": "Cancelled"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-01-30 06:46:37.696686",
+  "name": "Qualified",
+  "style": "Success",
+  "workflow_state_name": "Qualified"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-01-30 06:46:37.697854",
+  "name": "Unqualified",
+  "style": "Inverse",
+  "workflow_state_name": "Unqualified"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-01-30 06:46:37.698789",
+  "name": "Converted",
+  "style": "Primary",
+  "workflow_state_name": "Converted"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-01-30 06:46:37.699692",
+  "name": "Lost",
+  "style": "Inverse",
+  "workflow_state_name": "Lost"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-01-30 06:46:37.700604",
+  "name": "Confirmed",
+  "style": "Success",
+  "workflow_state_name": "Confirmed"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Workflow State",
+  "icon": "",
+  "modified": "2026-01-30 06:46:37.701502",
+  "name": "Submitted",
+  "style": "Primary",
+  "workflow_state_name": "Submitted"
+ }
+]

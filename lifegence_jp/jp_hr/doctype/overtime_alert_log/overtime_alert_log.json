@@ -1,0 +1,170 @@
+{
+	"actions": [],
+	"autoname": "naming_series:",
+	"creation": "2026-03-02 00:00:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"employee",
+		"employee_name",
+		"naming_series",
+		"column_break_basic",
+		"alert_date",
+		"status",
+		"section_break_detail",
+		"alert_type",
+		"overtime_hours",
+		"limit_hours",
+		"column_break_detail",
+		"overtime_agreement",
+		"target_month",
+		"target_year",
+		"section_break_remarks",
+		"remarks"
+	],
+	"fields": [
+		{
+			"fieldname": "employee",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "従業員",
+			"options": "Employee",
+			"reqd": 1
+		},
+		{
+			"fetch_from": "employee.employee_name",
+			"fieldname": "employee_name",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "従業員名",
+			"read_only": 1
+		},
+		{
+			"default": "OT-ALERT-.#####",
+			"fieldname": "naming_series",
+			"fieldtype": "Select",
+			"hidden": 1,
+			"label": "Naming Series",
+			"options": "OT-ALERT-.#####"
+		},
+		{
+			"fieldname": "column_break_basic",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "Today",
+			"fieldname": "alert_date",
+			"fieldtype": "Date",
+			"in_list_view": 1,
+			"label": "アラート日",
+			"reqd": 1
+		},
+		{
+			"default": "Open",
+			"fieldname": "status",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "ステータス",
+			"options": "Open\nAcknowledged\nResolved"
+		},
+		{
+			"fieldname": "section_break_detail",
+			"fieldtype": "Section Break",
+			"label": "アラート詳細"
+		},
+		{
+			"fieldname": "alert_type",
+			"fieldtype": "Select",
+			"in_list_view": 1,
+			"label": "アラート種別",
+			"options": "月間警告\n月間上限超過\n年間警告\n年間上限超過",
+			"reqd": 1
+		},
+		{
+			"fieldname": "overtime_hours",
+			"fieldtype": "Float",
+			"label": "実績時間",
+			"reqd": 1
+		},
+		{
+			"fieldname": "limit_hours",
+			"fieldtype": "Float",
+			"label": "上限時間",
+			"reqd": 1
+		},
+		{
+			"fieldname": "column_break_detail",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "overtime_agreement",
+			"fieldtype": "Link",
+			"label": "36協定",
+			"options": "Overtime Agreement"
+		},
+		{
+			"fieldname": "target_month",
+			"fieldtype": "Data",
+			"label": "対象月"
+		},
+		{
+			"fieldname": "target_year",
+			"fieldtype": "Int",
+			"label": "対象年"
+		},
+		{
+			"fieldname": "section_break_remarks",
+			"fieldtype": "Section Break",
+			"label": "備考"
+		},
+		{
+			"fieldname": "remarks",
+			"fieldtype": "Small Text",
+			"label": "備考"
+		}
+	],
+	"index_web_pages_for_search": 0,
+	"links": [],
+	"modified": "2026-03-02 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "JP HR",
+	"name": "Overtime Alert Log",
+	"naming_rule": "By \"Naming Series\" field",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "HR Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "HR User"
+		}
+	],
+	"sort_field": "creation",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1
+}

@@ -1,0 +1,210 @@
+{
+	"actions": [],
+	"autoname": "naming_series:",
+	"creation": "2026-03-02 00:00:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"employee",
+		"employee_name",
+		"naming_series",
+		"column_break_basic",
+		"effective_from",
+		"effective_to",
+		"section_break_remuneration",
+		"total_remuneration",
+		"remuneration_grade",
+		"column_break_remuneration",
+		"standard_monthly_amount",
+		"section_break_premium",
+		"health_insurance_premium",
+		"nursing_care_premium",
+		"column_break_premium",
+		"pension_premium",
+		"section_break_total",
+		"total_employee_premium",
+		"column_break_total",
+		"total_employer_premium",
+		"section_break_calculation",
+		"insurance_rate",
+		"calculation_type"
+	],
+	"fields": [
+		{
+			"fieldname": "employee",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "\u5f93\u696d\u54e1",
+			"options": "Employee",
+			"reqd": 1
+		},
+		{
+			"fetch_from": "employee.employee_name",
+			"fieldname": "employee_name",
+			"fieldtype": "Data",
+			"label": "\u5f93\u696d\u54e1\u540d",
+			"read_only": 1
+		},
+		{
+			"default": "SMR-.#####",
+			"fieldname": "naming_series",
+			"fieldtype": "Select",
+			"hidden": 1,
+			"label": "Naming Series",
+			"options": "SMR-.#####"
+		},
+		{
+			"fieldname": "column_break_basic",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "effective_from",
+			"fieldtype": "Date",
+			"in_list_view": 1,
+			"label": "\u9069\u7528\u958b\u59cb\u5e74\u6708",
+			"reqd": 1
+		},
+		{
+			"fieldname": "effective_to",
+			"fieldtype": "Date",
+			"label": "\u9069\u7528\u7d42\u4e86\u5e74\u6708"
+		},
+		{
+			"fieldname": "section_break_remuneration",
+			"fieldtype": "Section Break",
+			"label": "\u5831\u916c\u6708\u984d"
+		},
+		{
+			"fieldname": "total_remuneration",
+			"fieldtype": "Currency",
+			"in_list_view": 1,
+			"label": "\u5831\u916c\u6708\u984d\u5408\u8a08",
+			"reqd": 1
+		},
+		{
+			"fieldname": "remuneration_grade",
+			"fieldtype": "Int",
+			"label": "\u7b49\u7d1a"
+		},
+		{
+			"fieldname": "column_break_remuneration",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "standard_monthly_amount",
+			"fieldtype": "Currency",
+			"in_list_view": 1,
+			"label": "\u6a19\u6e96\u5831\u916c\u6708\u984d"
+		},
+		{
+			"fieldname": "section_break_premium",
+			"fieldtype": "Section Break",
+			"label": "\u4fdd\u967a\u6599\uff08\u81ea\u52d5\u8a08\u7b97\uff09"
+		},
+		{
+			"fieldname": "health_insurance_premium",
+			"fieldtype": "Currency",
+			"label": "\u5065\u5eb7\u4fdd\u967a\u6599",
+			"read_only": 1
+		},
+		{
+			"fieldname": "nursing_care_premium",
+			"fieldtype": "Currency",
+			"label": "\u4ecb\u8b77\u4fdd\u967a\u6599",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_premium",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "pension_premium",
+			"fieldtype": "Currency",
+			"label": "\u539a\u751f\u5e74\u91d1\u4fdd\u967a\u6599",
+			"read_only": 1
+		},
+		{
+			"fieldname": "section_break_total",
+			"fieldtype": "Section Break",
+			"label": "\u8ca0\u62c5\u5408\u8a08"
+		},
+		{
+			"fieldname": "total_employee_premium",
+			"fieldtype": "Currency",
+			"label": "\u88ab\u4fdd\u967a\u8005\u8ca0\u62c5\u5408\u8a08",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_total",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "total_employer_premium",
+			"fieldtype": "Currency",
+			"label": "\u4e8b\u696d\u4e3b\u8ca0\u62c5\u5408\u8a08",
+			"read_only": 1
+		},
+		{
+			"fieldname": "section_break_calculation",
+			"fieldtype": "Section Break",
+			"label": "\u8a08\u7b97\u57fa\u6e96",
+			"collapsible": 1
+		},
+		{
+			"fieldname": "insurance_rate",
+			"fieldtype": "Link",
+			"label": "\u9069\u7528\u6599\u7387\u30c6\u30fc\u30d6\u30eb",
+			"options": "Social Insurance Rate"
+		},
+		{
+			"fieldname": "calculation_type",
+			"fieldtype": "Select",
+			"label": "\u7b97\u5b9a\u7a2e\u5225",
+			"options": "\u7b97\u5b9a\u57fa\u790e\n\u6708\u984d\u5909\u66f4\n\u8cc7\u683c\u53d6\u5f97\u6642"
+		}
+	],
+	"index_web_pages_for_search": 0,
+	"links": [],
+	"modified": "2026-03-02 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "JP HR",
+	"name": "Standard Monthly Remuneration",
+	"naming_rule": "By \"Naming Series\" field",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "HR Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "HR User"
+		}
+	],
+	"sort_field": "creation",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1
+}

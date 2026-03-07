@@ -1,0 +1,85 @@
+{
+	"actions": [],
+	"creation": "2026-01-30 00:00:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"enable_automation",
+		"column_break_basic",
+		"default_timeout",
+		"max_retry_count",
+		"log_retention_days",
+		"section_break_n8n",
+		"n8n_base_url",
+		"n8n_api_key"
+	],
+	"fields": [
+		{
+			"default": "1",
+			"fieldname": "enable_automation",
+			"fieldtype": "Check",
+			"label": "Enable Automation"
+		},
+		{
+			"fieldname": "column_break_basic",
+			"fieldtype": "Column Break"
+		},
+		{
+			"default": "30",
+			"fieldname": "default_timeout",
+			"fieldtype": "Int",
+			"label": "Default Timeout (seconds)"
+		},
+		{
+			"default": "3",
+			"fieldname": "max_retry_count",
+			"fieldtype": "Int",
+			"label": "Max Retry Count"
+		},
+		{
+			"default": "90",
+			"fieldname": "log_retention_days",
+			"fieldtype": "Int",
+			"label": "Log Retention Days"
+		},
+		{
+			"fieldname": "section_break_n8n",
+			"fieldtype": "Section Break",
+			"label": "n8n Integration",
+			"collapsible": 1
+		},
+		{
+			"fieldname": "n8n_base_url",
+			"fieldtype": "Data",
+			"label": "n8n Base URL"
+		},
+		{
+			"fieldname": "n8n_api_key",
+			"fieldtype": "Password",
+			"label": "n8n API Key"
+		}
+	],
+	"index_web_pages_for_search": 0,
+	"issingle": 1,
+	"links": [],
+	"modified": "2026-01-30 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "BPM",
+	"name": "BPM Settings",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"email": 1,
+			"print": 1,
+			"read": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		}
+	],
+	"sort_field": "creation",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1
+}

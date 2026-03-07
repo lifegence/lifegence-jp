@@ -1,0 +1,127 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2026-02-09 00:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "payee_name",
+  "withholding_tax_rule",
+  "cb_entry",
+  "payment_date",
+  "status",
+  "amount_section",
+  "gross_amount",
+  "tax_amount",
+  "cb_amount",
+  "net_amount"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "WHT-.YYYY.-",
+   "default": "WHT-.YYYY.-",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Payee Name (支払先)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "withholding_tax_rule",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Withholding Tax Rule",
+   "options": "Withholding Tax Rule"
+  },
+  {
+   "fieldname": "cb_entry",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Payment Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Draft\nSubmitted\nPaid\nCancelled",
+   "default": "Draft"
+  },
+  {
+   "fieldname": "amount_section",
+   "fieldtype": "Section Break",
+   "label": "Amount"
+  },
+  {
+   "fieldname": "gross_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Gross Amount (支払金額)",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tax_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Tax Amount (源泉徴収税額)",
+   "read_only": 1
+  },
+  {
+   "fieldname": "cb_amount",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "net_amount",
+   "fieldtype": "Currency",
+   "label": "Net Amount (差引支払額)",
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2026-02-09 00:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "JP Accounting",
+ "name": "Withholding Tax Entry",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "System Manager",
+   "submit": 1,
+   "cancel": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "read": 1,
+   "submit": 1,
+   "write": 1,
+   "role": "Accounts Manager"
+  },
+  {
+   "read": 1,
+   "role": "Accounts User"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

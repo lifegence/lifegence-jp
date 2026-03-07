@@ -1,0 +1,105 @@
+{
+	"actions": [],
+	"creation": "2026-03-02 00:00:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"social_insurance_section",
+		"health_insurance_association",
+		"pension_office_code",
+		"column_break_si",
+		"employment_insurance_section",
+		"employment_insurance_rate_type",
+		"column_break_ei",
+		"calculation_section",
+		"auto_calculate_premiums",
+		"fiscal_year_start"
+	],
+	"fields": [
+		{
+			"fieldname": "social_insurance_section",
+			"fieldtype": "Section Break",
+			"label": "社会保険設定"
+		},
+		{
+			"fieldname": "health_insurance_association",
+			"fieldtype": "Data",
+			"label": "健康保険組合名"
+		},
+		{
+			"fieldname": "pension_office_code",
+			"fieldtype": "Data",
+			"label": "年金事務所コード"
+		},
+		{
+			"fieldname": "column_break_si",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "employment_insurance_section",
+			"fieldtype": "Section Break",
+			"label": "雇用保険設定"
+		},
+		{
+			"fieldname": "employment_insurance_rate_type",
+			"fieldtype": "Select",
+			"label": "雇用保険料率区分",
+			"options": "一般\n建設\n農林水産",
+			"default": "一般"
+		},
+		{
+			"fieldname": "column_break_ei",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "calculation_section",
+			"fieldtype": "Section Break",
+			"label": "自動計算設定"
+		},
+		{
+			"default": "1",
+			"fieldname": "auto_calculate_premiums",
+			"fieldtype": "Check",
+			"label": "給与計算時に保険料を自動計算"
+		},
+		{
+			"default": "4月",
+			"fieldname": "fiscal_year_start",
+			"fieldtype": "Select",
+			"label": "会計年度開始月",
+			"options": "4月\n1月"
+		}
+	],
+	"index_web_pages_for_search": 0,
+	"issingle": 1,
+	"links": [],
+	"modified": "2026-03-02 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "JP HR",
+	"name": "JP HR Settings",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"email": 1,
+			"print": 1,
+			"read": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"email": 1,
+			"print": 1,
+			"read": 1,
+			"role": "HR Manager",
+			"share": 1,
+			"write": 1
+		}
+	],
+	"sort_field": "creation",
+	"sort_order": "DESC",
+	"states": [],
+	"track_changes": 1
+}

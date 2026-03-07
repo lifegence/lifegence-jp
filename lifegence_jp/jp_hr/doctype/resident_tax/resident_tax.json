@@ -1,0 +1,161 @@
+{
+	"actions": [],
+	"autoname": "naming_series:",
+	"creation": "2026-03-02 00:00:00.000000",
+	"doctype": "DocType",
+	"engine": "InnoDB",
+	"field_order": [
+		"naming_series",
+		"employee",
+		"employee_name",
+		"column_break_basic",
+		"fiscal_year",
+		"municipality",
+		"status",
+		"section_break_amount",
+		"annual_amount",
+		"column_break_amount",
+		"notification_date",
+		"section_break_monthly",
+		"monthly_amounts",
+		"section_break_remarks",
+		"remarks"
+	],
+	"fields": [
+		{
+			"fieldname": "naming_series",
+			"fieldtype": "Select",
+			"hidden": 1,
+			"label": "Naming Series",
+			"options": "RES-TAX-.#####",
+			"reqd": 1
+		},
+		{
+			"fieldname": "employee",
+			"fieldtype": "Link",
+			"in_list_view": 1,
+			"label": "従業員",
+			"options": "Employee",
+			"reqd": 1
+		},
+		{
+			"fetch_from": "employee.employee_name",
+			"fieldname": "employee_name",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "従業員名",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_basic",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "fiscal_year",
+			"fieldtype": "Int",
+			"in_list_view": 1,
+			"label": "対象年度",
+			"reqd": 1
+		},
+		{
+			"fieldname": "municipality",
+			"fieldtype": "Data",
+			"in_list_view": 1,
+			"label": "市区町村",
+			"reqd": 1
+		},
+		{
+			"default": "Draft",
+			"fieldname": "status",
+			"fieldtype": "Select",
+			"label": "ステータス",
+			"options": "Draft\nActive\nCompleted"
+		},
+		{
+			"fieldname": "section_break_amount",
+			"fieldtype": "Section Break",
+			"label": "税額情報"
+		},
+		{
+			"fieldname": "annual_amount",
+			"fieldtype": "Currency",
+			"label": "年税額",
+			"read_only": 1
+		},
+		{
+			"fieldname": "column_break_amount",
+			"fieldtype": "Column Break"
+		},
+		{
+			"fieldname": "notification_date",
+			"fieldtype": "Date",
+			"label": "通知書受領日"
+		},
+		{
+			"fieldname": "section_break_monthly",
+			"fieldtype": "Section Break",
+			"label": "月額明細"
+		},
+		{
+			"fieldname": "monthly_amounts",
+			"fieldtype": "Table",
+			"label": "月額明細",
+			"options": "Resident Tax Monthly"
+		},
+		{
+			"fieldname": "section_break_remarks",
+			"fieldtype": "Section Break",
+			"label": "備考"
+		},
+		{
+			"fieldname": "remarks",
+			"fieldtype": "Small Text",
+			"label": "備考"
+		}
+	],
+	"index_web_pages_for_search": 0,
+	"links": [],
+	"modified": "2026-03-02 00:00:00.000000",
+	"modified_by": "Administrator",
+	"module": "JP HR",
+	"name": "Resident Tax",
+	"naming_rule": "By \"Naming Series\" field",
+	"owner": "Administrator",
+	"permissions": [
+		{
+			"create": 1,
+			"delete": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "System Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"create": 1,
+			"email": 1,
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "HR Manager",
+			"share": 1,
+			"write": 1
+		},
+		{
+			"export": 1,
+			"print": 1,
+			"read": 1,
+			"report": 1,
+			"role": "HR User"
+		}
+	],
+	"sort_field": "creation",
+	"sort_order": "DESC",
+	"states": [],
+	"title_field": "employee_name",
+	"track_changes": 1
+}
