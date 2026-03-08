@@ -87,7 +87,7 @@ class TestLaborInsurance(FrappeTestCase):
 
 	def test_workers_comp_rate_by_category(self):
 		"""TC-LI03: Verify auto-set workers' compensation rate by category."""
-		from lifegence_jp.jp_hr.jp_hr.doctype.labor_insurance_record.labor_insurance_record import WORKERS_COMP_RATES
+		from lifegence_jp.jp_hr.doctype.labor_insurance_record.labor_insurance_record import WORKERS_COMP_RATES
 
 		for category, expected_rate in [("一般", 3.0), ("建設", 9.5), ("農林水産", 13.0), ("清酒製造", 6.5)]:
 			record = frappe.get_doc({

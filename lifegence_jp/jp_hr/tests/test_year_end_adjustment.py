@@ -3,7 +3,7 @@
 
 import frappe
 from frappe.tests.utils import FrappeTestCase
-from lifegence_jp.jp_hr.jp_hr.doctype.year_end_adjustment.year_end_adjustment import (
+from lifegence_jp.jp_hr.doctype.year_end_adjustment.year_end_adjustment import (
 	calc_salary_income_deduction,
 	calc_income_tax,
 )

@@ -17,7 +17,7 @@ def calculate_monthly_withholding(monthly_salary, dependents=0, table_type="甲"
 	Returns:
 		dict with tax amount and calculation details
 	"""
-	from lifegence_jp.jp_hr.jp_hr.doctype.withholding_tax_table.withholding_tax_data import (
+	from lifegence_jp.jp_hr.doctype.withholding_tax_table.withholding_tax_data import (
 		get_withholding_tax,
 	)
 

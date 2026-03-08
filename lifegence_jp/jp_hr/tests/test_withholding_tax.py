@@ -3,7 +3,7 @@
 
 import frappe
 from frappe.tests.utils import FrappeTestCase
-from lifegence_jp.jp_hr.jp_hr.doctype.withholding_tax_table.withholding_tax_data import (
+from lifegence_jp.jp_hr.doctype.withholding_tax_table.withholding_tax_data import (
 	get_withholding_tax,
 )
 
