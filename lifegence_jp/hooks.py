@@ -2,7 +2,7 @@ app_name = "lifegence_jp"
 app_title = "Lifegence JP"
 app_publisher = "Lifegence"
 app_description = "Japanese Business Processes - Workflow, HR, Accounting"
-app_email = "masakazu@lifegence.co.jp"
+app_email = "info@lifegence.co.jp"
 app_license = "mit"
 
 required_apps = ["frappe", "erpnext"]

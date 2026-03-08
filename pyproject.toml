@@ -1,7 +1,7 @@
 [project]
 name = "lifegence_jp"
 authors = [
-    { name = "Lifegence", email = "masakazu@lifegence.co.jp"}
+    { name = "Lifegence", email = "info@lifegence.co.jp"}
 ]
 description = "Japanese Business Processes - Workflow, HR, Accounting"
 license = {file = "LICENSE"}
