@@ -5,7 +5,7 @@ app_description = "Japanese Business Processes - Workflow, HR, Accounting"
 app_email = "info@lifegence.co.jp"
 app_license = "mit"
 
-required_apps = ["frappe", "erpnext"]
+required_apps = ["frappe", "erpnext", "hrms"]
 
 export_python_type_annotations = True
 
