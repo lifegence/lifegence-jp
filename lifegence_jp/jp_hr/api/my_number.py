@@ -29,6 +29,8 @@ def get_my_number_masked(employee):
 
 	Requires HR Manager or System Manager role.
 	"""
+	frappe.only_for(["HR Manager", "System Manager"])
+
 	if not frappe.db.exists("Employee", employee):
 		return {"success": False, "error": _("従業員 {0} は存在しません。").format(employee)}
 
@@ -102,6 +104,8 @@ def check_my_number_status(employee):
 
 	Requires HR Manager or System Manager role.
 	"""
+	frappe.only_for(["HR Manager", "System Manager"])
+
 	if not frappe.db.exists("Employee", employee):
 		return {"success": False, "error": _("従業員 {0} は存在しません。").format(employee)}
 

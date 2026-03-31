@@ -3,6 +3,7 @@
 
 import frappe
 from frappe.model.document import Document
+from lifegence_jp.bpm.utils import get_current_employee
 
 
 class Ringi(Document):
@@ -13,11 +14,7 @@ class Ringi(Document):
 	def _set_applicant_info(self):
 		"""Auto-set applicant from current user's employee record."""
 		if not self.applicant:
-			employee = frappe.db.get_value(
-				"Employee",
-				{"user_id": frappe.session.user, "status": "Active"},
-				"name",
-			)
+			employee = get_current_employee()
 			if employee:
 				self.applicant = employee
 

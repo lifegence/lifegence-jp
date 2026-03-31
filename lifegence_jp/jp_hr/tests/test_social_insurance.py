@@ -2,6 +2,7 @@
 # For license information, please see license.txt
 
 import frappe
+from lifegence_jp.jp_hr.tests.test_helpers import ensure_test_employee
 from frappe.tests.utils import FrappeTestCase
 
 
@@ -12,7 +13,7 @@ class TestSocialInsurance(FrappeTestCase):
 	def setUpClass(cls):
 		super().setUpClass()
 		cls._ensure_insurance_rate()
-		cls._ensure_employee()
+		ensure_test_employee(cls)
 
 	@classmethod
 	def _ensure_insurance_rate(cls):
@@ -32,39 +33,6 @@ class TestSocialInsurance(FrappeTestCase):
 				"employment_insurance_employer": 0.95,
 			}).insert(ignore_permissions=True)
 			frappe.db.commit()
-
-	@classmethod
-	def _ensure_employee(cls):
-		"""Ensure test employee exists."""
-		if not frappe.db.exists("Employee", {"employee_name": "テスト太郎"}):
-			# Ensure Company exists
-			if not frappe.db.exists("Company", "テスト株式会社"):
-				company = frappe.get_doc({
-					"doctype": "Company",
-					"company_name": "テスト株式会社",
-					"abbr": "TST",
-					"country": "Japan",
-					"default_currency": "JPY",
-				})
-				company.insert(ignore_permissions=True)
-
-			emp = frappe.get_doc({
-				"doctype": "Employee",
-				"employee_name": "テスト太郎",
-				"first_name": "太郎",
-				"company": "テスト株式会社",
-				"status": "Active",
-				"gender": "Male",
-				"date_of_birth": "1990-01-01",
-				"date_of_joining": "2020-04-01",
-			})
-			emp.insert(ignore_permissions=True)
-			cls.test_employee = emp.name
-			frappe.db.commit()
-		else:
-			cls.test_employee = frappe.db.get_value(
-				"Employee", {"employee_name": "テスト太郎"}, "name"
-			)
 
 	# ─── TC-SI01: Create Social Insurance Rate ──────────────────────────────
 

@@ -19,7 +19,7 @@ def receive(source=None):
 	}
 
 	Security: Validates HMAC-SHA256 signature from X-Webhook-Signature header.
-	The secret is stored in BPM Settings.
+	The secret is stored in BPM Settings. Signature is MANDATORY.
 	"""
 	# Parse request
 	try:
@@ -28,10 +28,19 @@ def receive(source=None):
 	except json.JSONDecodeError:
 		frappe.throw("Invalid JSON payload", frappe.InvalidRequestError)
 
-	# Validate signature
+	# Validate signature - MANDATORY
 	signature = frappe.request.headers.get("X-Webhook-Signature")
-	if signature:
-		_verify_signature(data, signature)
+	if not signature:
+		frappe.log_error(
+			"Webhook request rejected: missing signature header",
+			"BPM Webhook Auth Failure",
+		)
+		frappe.throw("Missing webhook signature", frappe.AuthenticationError)
+
+	_verify_signature(data, signature)
+
+	# Log successful authentication
+	frappe.logger().info(f"BPM Webhook: authenticated request from source={source}")
 
 	# Extract fields
 	doctype = payload.get("doctype")
@@ -45,8 +54,9 @@ def receive(source=None):
 			frappe.InvalidRequestError,
 		)
 
-	# Execute as specified user if provided (requires System Manager)
+	# Validate and set user if provided
 	if user:
+		_validate_user(user)
 		frappe.set_user(user)
 
 	try:
@@ -72,6 +82,22 @@ def receive(source=None):
 		frappe.throw(str(e))
 
 
+def _validate_user(user):
+	"""Validate that the user exists and is enabled."""
+	if not frappe.db.exists("User", user):
+		frappe.throw(
+			f"User {user} does not exist",
+			frappe.ValidationError,
+		)
+
+	enabled = frappe.db.get_value("User", user, "enabled")
+	if not enabled:
+		frappe.throw(
+			f"User {user} is disabled",
+			frappe.ValidationError,
+		)
+
+
 def _verify_signature(payload_body, signature):
 	"""Verify HMAC-SHA256 signature of the webhook payload."""
 	try:
@@ -81,9 +107,14 @@ def _verify_signature(payload_body, signature):
 		secret = None
 
 	if not secret:
-		# No secret configured - skip verification but log warning
-		frappe.logger().warning("BPM: Webhook signature provided but no secret configured")
-		return
+		frappe.log_error(
+			"Webhook rejected: no webhook secret configured in BPM Settings",
+			"BPM Webhook Auth Failure",
+		)
+		frappe.throw(
+			"Webhook secret not configured. Configure n8n_api_key in BPM Settings.",
+			frappe.AuthenticationError,
+		)
 
 	expected = hmac.new(
 		secret.encode("utf-8"),
@@ -92,4 +123,8 @@ def _verify_signature(payload_body, signature):
 	).hexdigest()
 
 	if not hmac.compare_digest(expected, signature):
+		frappe.log_error(
+			"Webhook rejected: invalid HMAC signature",
+			"BPM Webhook Auth Failure",
+		)
 		frappe.throw("Invalid webhook signature", frappe.AuthenticationError)

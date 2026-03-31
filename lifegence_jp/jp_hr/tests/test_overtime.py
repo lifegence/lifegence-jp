@@ -2,6 +2,7 @@
 # For license information, please see license.txt
 
 import frappe
+from lifegence_jp.jp_hr.tests.test_helpers import ensure_test_employee
 from frappe.tests.utils import FrappeTestCase
 
 
@@ -11,38 +12,7 @@ class TestOvertime(FrappeTestCase):
 	@classmethod
 	def setUpClass(cls):
 		super().setUpClass()
-		cls._ensure_employee()
-
-	@classmethod
-	def _ensure_employee(cls):
-		"""Ensure test employee exists."""
-		if not frappe.db.exists("Employee", {"employee_name": "テスト太郎"}):
-			if not frappe.db.exists("Company", "テスト株式会社"):
-				frappe.get_doc({
-					"doctype": "Company",
-					"company_name": "テスト株式会社",
-					"abbr": "TST",
-					"country": "Japan",
-					"default_currency": "JPY",
-				}).insert(ignore_permissions=True)
-
-			emp = frappe.get_doc({
-				"doctype": "Employee",
-				"employee_name": "テスト太郎",
-				"first_name": "太郎",
-				"company": "テスト株式会社",
-				"status": "Active",
-				"gender": "Male",
-				"date_of_birth": "1990-01-01",
-				"date_of_joining": "2020-04-01",
-			})
-			emp.insert(ignore_permissions=True)
-			cls.test_employee = emp.name
-			frappe.db.commit()
-		else:
-			cls.test_employee = frappe.db.get_value(
-				"Employee", {"employee_name": "テスト太郎"}, "name"
-			)
+		ensure_test_employee(cls)
 
 	def setUp(self):
 		"""Clean up test agreements before each test to avoid conflicts."""
