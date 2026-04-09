@@ -7,7 +7,7 @@
  "icon_type": "App",
  "idx": 0,
  "label": "\u30ef\u30fc\u30af\u30d5\u30ed\u30fc",
- "logo_url": "",
+ "logo_url": "/assets/lifegence_jp/images/logo_bpm.svg",
  "link": "/app/bpm",
  "link_type": "External",
  "name": "Lifegence JP",
