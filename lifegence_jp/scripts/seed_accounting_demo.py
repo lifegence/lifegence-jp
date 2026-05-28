@@ -389,6 +389,43 @@ def _ensure_policies() -> None:
 	frappe.db.commit()
 
 
+def _ensure_conversations(agent_doc_name: str) -> None:
+	"""Pre-create a real AI Direct conversation per persona so the chat_room
+	tile opens directly (a virtual/unstarted tile is flakier to click in
+	recording)."""
+	from lifegence_agent.api.conversation_agents import create_ai_direct_conversation
+
+	original = frappe.session.user
+	try:
+		for spec in DEMO_USERS:
+			if not frappe.db.exists("User", spec["email"]):
+				continue
+			frappe.set_user(spec["email"])
+			try:
+				res = create_ai_direct_conversation(agent_doc_name)
+				conv = res.get("name")
+				# Seed a greeting agent message so the conversation shows as a
+				# real "recent" tile (not a virtual "start chat" tile), which is
+				# what the recording clicks. is_agent_message=1 avoids triggering
+				# a real agent response.
+				if conv and not frappe.db.exists("Chat Message", {"conversation": conv}):
+					frappe.get_doc(
+						{
+							"doctype": "Chat Message",
+							"conversation": conv,
+							"is_agent_message": 1,
+							"agent": agent_doc_name,
+							"message_type": "Text",
+							"content": "こんにちは、経理アシスタントです。月次決算のご用件をどうぞ。",
+						}
+					).insert(ignore_permissions=True)
+			except Exception as e:
+				print(f"    conv for {spec['email']} skipped: {e}")
+	finally:
+		frappe.set_user(original)
+	frappe.db.commit()
+
+
 def _ensure_demo_agent() -> str:
 	if frappe.db.exists("Chat Agent", {"agent_name": DEMO_AGENT_NAME}):
 		agent = frappe.get_doc("Chat Agent", {"agent_name": DEMO_AGENT_NAME})
@@ -442,6 +479,8 @@ def run() -> dict:
 	print(f"  ✓ Agent Skill Policies: {len(DEMO_POLICIES)}")
 	agent = _ensure_demo_agent()
 	print(f"  ✓ Demo agent: {agent}")
+	_ensure_conversations(agent)
+	print("  ✓ AI Direct conversations per persona")
 	frappe.db.commit()
 	print("✓ Accounting demo seed complete")
 	return {
