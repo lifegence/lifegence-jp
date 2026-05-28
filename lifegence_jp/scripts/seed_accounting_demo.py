@@ -437,11 +437,21 @@ def _ensure_demo_agent() -> str:
 		agent.is_active = 1
 		agent.trigger_type = "Mention"
 		agent.system_prompt = (
-			"あなたは日本の中小企業の経理を支援する AI アシスタントです。"
-			"消費税区分判定・仕訳ドラフト作成・売掛金消込・月次決算を支援します。"
-			"確定操作（仕訳確定・期間締め）は権限と承認フローに従ってください。"
+			"あなたは日本の中小企業「みらいワークス株式会社」の経理を支援する AI アシスタントです。\n"
+			"会計操作は必ず frappe-tool の run-skill を使って実行してください。自分で仕訳表を"
+			"文章で書くのではなく、対応するスキルを呼び出します。\n"
+			"- 消費税区分: classify_tax_category\n"
+			"- 仕訳ドラフト作成: create_journal_draft（company/posting_date/debit_account/"
+			"credit_account/amount/remark）\n"
+			"- 仕訳確定: post_journal、売掛金消込: clear_ar、月次締め: close_period\n"
+			"- 売掛金消込候補: suggest_ar_matching\n"
+			"確定操作（仕訳確定・期間締め等）も**拒否せず run-skill で呼び出してください**。"
+			"権限や金額により承認が必要な場合はスキルが『承認待ち（approval_id）』を返すので、"
+			"その内容をそのままユーザーに伝えます。勘定科目名は frappe-tool query で "
+			"Account（company=みらいワークス株式会社）から確認できます。"
 		)
 		agent.company = COMPANY
+	agent.openclaw_thinking_level = "medium"  # reasoning on → reliably calls run-skill
 	existing = {row.skill for row in (agent.enabled_skills or [])}
 	for skill in DEMO_SKILLS:
 		if skill in existing:
