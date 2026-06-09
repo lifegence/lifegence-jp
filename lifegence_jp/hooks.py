@@ -37,7 +37,10 @@ after_install = "lifegence_jp.install.after_install"
 doc_events = {
 	"*": {
 		"on_update": "lifegence_jp.bpm.automation.dispatcher.on_document_update",
-	}
+	},
+	"Company": {
+		"on_update": "lifegence_jp.jp_accounting.jp_consumption_tax.setup_for_company_event",
+	},
 }
 
 # Fixtures
